@@ -1,0 +1,10 @@
+l_english:
+ # Decisions
+ colonial_repression:0 "Colonial Repression"
+ colonial_repression_desc:0 "Use force to maintain control over our colonies, increasing war support but decreasing stability."
+ 
+ appoint_technocrats:0 "Appoint Technocrats"
+ appoint_technocrats_desc:0 "Bring scientific experts into government positions to improve research and production efficiency."
+ 
+ declare_world_empire:0 "Declare World Empire"
+ declare_world_empire_desc:0 "Proclaim our nation as the new world empire, demanding recognition from all other nations."

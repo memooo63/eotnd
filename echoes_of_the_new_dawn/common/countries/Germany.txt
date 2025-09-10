@@ -1,0 +1,31 @@
+GER = {
+	graphical_culture = western_european_gfx
+	
+	color = { 0.2 0.2 0.2 }
+	
+	ai = "germany_1936.ai"
+	
+	# Startbedingungen für 1936
+	capital = 39
+	
+	# Instabile Startbedingungen
+	stability = 0.3
+	war_support = 0.4
+	
+	# Technologielevel = 1918
+	research_slots = 2
+	
+	# Ideologien verfügbar
+	allowed = {
+		original_tag = GER
+		always = yes
+	}
+	
+	# Regierungsform
+	government = {
+		ideology = democratic
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+}

@@ -1,0 +1,800 @@
+namespace = echoes
+
+# Stability of the Reich
+country_event = {
+	id = echoes.100
+	title = echoes.100.t
+	desc = echoes.100.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.100.a
+		add_political_power = 50
+		add_stability = 0.05
+	}
+	
+	option = {
+		name = echoes.100.b
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+# Restore Monarchy
+country_event = {
+	id = echoes.101
+	title = echoes.101.t
+	desc = echoes.101.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.101.a
+		add_political_power = 100
+		add_stability = 0.1
+	}
+	
+	option = {
+		name = echoes.101.b
+		add_political_power = 50
+		add_war_support = 0.1
+	}
+}
+
+# Crown Kaiser
+country_event = {
+	id = echoes.102
+	title = echoes.102.t
+	desc = echoes.102.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.102.a
+		add_political_power = 150
+		add_war_support = 0.15
+		add_ideas = GER_imperial_restoration
+	}
+	
+	option = {
+		name = echoes.102.b
+		add_political_power = 100
+		add_stability = 0.1
+	}
+}
+
+# Imperial Alliance
+country_event = {
+	id = echoes.103
+	title = echoes.103.t
+	desc = echoes.103.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.103.a
+		add_political_power = 100
+		create_faction = GER_imperial_alliance
+	}
+	
+	option = {
+		name = echoes.103.b
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Reclaim Colonies
+country_event = {
+	id = echoes.104
+	title = echoes.104.t
+	desc = echoes.104.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.104.a
+		add_political_power = 100
+		add_war_support = 0.2
+	}
+	
+	option = {
+		name = echoes.104.b
+		add_political_power = 50
+		add_stability = 0.1
+	}
+}
+
+# Naval Expansion
+country_event = {
+	id = echoes.105
+	title = echoes.105.t
+	desc = echoes.105.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.105.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = naval_doctrine
+			bonus = 0.5
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.105.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = naval_doctrine
+			bonus = 0.3
+			uses = 1
+		}
+	}
+}
+
+# Global Empire
+country_event = {
+	id = echoes.106
+	title = echoes.106.t
+	desc = echoes.106.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.106.a
+		add_political_power = 200
+		add_war_support = 0.25
+		add_ideas = GER_global_empire_ideology
+	}
+	
+	option = {
+		name = echoes.106.b
+		add_political_power = 100
+		add_stability = 0.1
+	}
+}
+
+# Imperial Economy
+country_event = {
+	id = echoes.107
+	title = echoes.107.t
+	desc = echoes.107.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.107.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.3
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.107.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.2
+			uses = 1
+		}
+	}
+}
+
+# Imperial Army
+country_event = {
+	id = echoes.108
+	title = echoes.108.t
+	desc = echoes.108.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.108.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = land_doctrine
+			bonus = 0.3
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.108.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = land_doctrine
+			bonus = 0.2
+			uses = 1
+		}
+	}
+}
+
+# Technocrat Movement
+country_event = {
+	id = echoes.109
+	title = echoes.109.t
+	desc = echoes.109.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.109.a
+		add_political_power = 100
+		add_stability = 0.1
+	}
+	
+	option = {
+		name = echoes.109.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = electronics
+			bonus = 0.3
+			uses = 1
+		}
+	}
+}
+
+# Invite Tesla
+country_event = {
+	id = echoes.110
+	title = echoes.110.t
+	desc = echoes.110.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.110.a
+		add_political_power = 150
+		add_tech_bonus = {
+			name = electronics
+			bonus = 1.0
+			uses = 3
+		}
+	}
+	
+	option = {
+		name = echoes.110.b
+		add_political_power = 100
+		add_tech_bonus = {
+			name = electronics
+			bonus = 0.5
+			uses = 2
+		}
+	}
+}
+
+# Dieselpunk Research
+country_event = {
+	id = echoes.111
+	title = echoes.111.t
+	desc = echoes.111.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.111.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.5
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.111.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.3
+			uses = 1
+		}
+	}
+}
+
+# Airship Program
+country_event = {
+	id = echoes.112
+	title = echoes.112.t
+	desc = echoes.112.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.112.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = air_doctrine
+			bonus = 0.5
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.112.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = air_doctrine
+			bonus = 0.3
+			uses = 1
+		}
+	}
+}
+
+# Experimental Weapons
+country_event = {
+	id = echoes.113
+	title = echoes.113.t
+	desc = echoes.113.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.113.a
+		add_political_power = 150
+		add_tech_bonus = {
+			name = land_doctrine
+			bonus = 0.7
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.113.b
+		add_political_power = 100
+		add_tech_bonus = {
+			name = land_doctrine
+			bonus = 0.5
+			uses = 1
+		}
+	}
+}
+
+# Industrial Supremacy
+country_event = {
+	id = echoes.114
+	title = echoes.114.t
+	desc = echoes.114.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.114.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.8
+			uses = 3
+		}
+	}
+	
+	option = {
+		name = echoes.114.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.5
+			uses = 2
+		}
+	}
+}
+
+# Science Diplomacy
+country_event = {
+	id = echoes.115
+	title = echoes.115.t
+	desc = echoes.115.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.115.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = electronics
+			bonus = 0.5
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.115.b
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Technocrat Government
+country_event = {
+	id = echoes.116
+	title = echoes.116.t
+	desc = echoes.116.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.116.a
+		add_political_power = 200
+		add_stability = 0.2
+		add_ideas = GER_technocrat_government_ideology
+	}
+	
+	option = {
+		name = echoes.116.b
+		add_political_power = 100
+		add_stability = 0.1
+	}
+}
+
+# Military Collectivism
+country_event = {
+	id = echoes.117
+	title = echoes.117.t
+	desc = echoes.117.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.117.a
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+	
+	option = {
+		name = echoes.117.b
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+}
+
+# Military Rule
+country_event = {
+	id = echoes.118
+	title = echoes.118.t
+	desc = echoes.118.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.118.a
+		add_political_power = 150
+		add_war_support = 0.15
+		add_ideas = GER_military_junta
+	}
+	
+	option = {
+		name = echoes.118.b
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+# War Economy
+country_event = {
+	id = echoes.119
+	title = echoes.119.t
+	desc = echoes.119.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.119.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.4
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.119.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.2
+			uses = 1
+		}
+	}
+}
+
+# Militarized Society
+country_event = {
+	id = echoes.120
+	title = echoes.120.t
+	desc = echoes.120.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.120.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = land_doctrine
+			bonus = 0.4
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.120.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = land_doctrine
+			bonus = 0.2
+			uses = 1
+		}
+	}
+}
+
+# Expansionism
+country_event = {
+	id = echoes.121
+	title = echoes.121.t
+	desc = echoes.121.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.121.a
+		add_political_power = 150
+		add_war_support = 0.2
+	}
+	
+	option = {
+		name = echoes.121.b
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+}
+
+# Worker-Soldier Unity
+country_event = {
+	id = echoes.122
+	title = echoes.122.t
+	desc = echoes.122.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.122.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.3
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.122.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.2
+			uses = 1
+		}
+	}
+}
+
+# Resource Extraction
+country_event = {
+	id = echoes.123
+	title = echoes.123.t
+	desc = echoes.123.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.123.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.3
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.123.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = industry
+			bonus = 0.2
+			uses = 1
+		}
+	}
+}
+
+# Authoritarian Ideology
+country_event = {
+	id = echoes.124
+	title = echoes.124.t
+	desc = echoes.124.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.124.a
+		add_political_power = 200
+		add_war_support = 0.25
+		add_ideas = GER_authoritarian_ideology_effect
+	}
+	
+	option = {
+		name = echoes.124.b
+		add_political_power = 100
+		add_war_support = 0.15
+	}
+}
+
+# Wilhelm III
+country_event = {
+	id = echoes.125
+	title = echoes.125.t
+	desc = echoes.125.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.125.a
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+	
+	option = {
+		name = echoes.125.b
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Compromise Monarch
+country_event = {
+	id = echoes.126
+	title = echoes.126.t
+	desc = echoes.126.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.126.a
+		add_political_power = 100
+		add_stability = 0.1
+	}
+	
+	option = {
+		name = echoes.126.b
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+}
+
+# Tesla Conflict
+country_event = {
+	id = echoes.127
+	title = echoes.127.t
+	desc = echoes.127.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.127.a
+		add_political_power = 100
+		add_war_support = 0.1
+	}
+	
+	option = {
+		name = echoes.127.b
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Tesla Cooperation
+country_event = {
+	id = echoes.128
+	title = echoes.128.t
+	desc = echoes.128.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.128.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = electronics
+			bonus = 0.5
+			uses = 2
+		}
+	}
+	
+	option = {
+		name = echoes.128.b
+		add_political_power = 50
+		add_tech_bonus = {
+			name = electronics
+			bonus = 0.3
+			uses = 1
+		}
+	}
+}
+
+# Hardline Junta
+country_event = {
+	id = echoes.129
+	title = echoes.129.t
+	desc = echoes.129.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.129.a
+		add_political_power = 100
+		add_war_support = 0.15
+	}
+	
+	option = {
+		name = echoes.129.b
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Moderate Junta
+country_event = {
+	id = echoes.130
+	title = echoes.130.t
+	desc = echoes.130.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.130.a
+		add_political_power = 100
+		add_stability = 0.1
+	}
+	
+	option = {
+		name = echoes.130.b
+		add_political_power = 50
+		add_war_support = 0.05
+	}
+}

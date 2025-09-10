@@ -1,0 +1,64 @@
+namespace = echoes
+
+# Tesla ruft zu Technokraten-Bewegung in Serbien auf
+country_event = {
+	id = echoes.1
+	title = echoes.1.t
+	desc = echoes.1.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.1.a
+		add_political_power = 50
+		add_tech_bonus = {
+			name = electronics
+			bonus = 0.5
+			uses = 1
+		}
+	}
+	
+	option = {
+		name = echoes.1.b
+		add_political_power = -25
+		add_stability = -0.05
+	}
+}
+
+# Deutsche Monarchie-Restauration
+country_event = {
+	id = echoes.2
+	title = echoes.2.t
+	desc = echoes.2.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.2.a
+		add_political_power = 100
+		add_war_support = 0.1
+		add_ideas = GER_imperial_restoration
+	}
+}
+
+# Technokratische Regierung in Deutschland
+country_event = {
+	id = echoes.3
+	title = echoes.3.t
+	desc = echoes.3.d
+	picture = GFX_report_event_generic_parliament
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = echoes.3.a
+		add_political_power = 100
+		add_tech_bonus = {
+			name = electronics
+			bonus = 1.0
+			uses = 2
+		}
+	}
+}

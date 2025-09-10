@@ -1,0 +1,28 @@
+capital = 39
+oob = "GER_1936"
+set_research_slots = 2
+set_convoys = 50
+
+# Startbedingungen 1936
+1936.1.1 = {
+	# Instabile Startbedingungen
+	stability = 0.3
+	war_support = 0.4
+	
+	# Technologielevel 1918
+	research_slots = 2
+	
+	# Regierungsform
+	government = {
+		ideology = democratic
+		last_election = "1936.1.1"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	# Ideologien verfügbar
+	allowed = {
+		original_tag = GER
+		always = yes
+	}
+}

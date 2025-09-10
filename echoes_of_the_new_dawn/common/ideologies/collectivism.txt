@@ -1,0 +1,18 @@
+ideologies = {
+	militarist_collectivism = {
+		ideology_type = {
+			democratic = 0
+			communism = 0
+			fascism = 0
+			neutrality = 0
+		}
+		ideology_type = {
+			militarist_collectivism = 1
+		}
+		modifier = {
+			conscription_factor = 0.2
+			production_speed_factor = 0.15
+			war_support_factor = 0.2
+		}
+	}
+}

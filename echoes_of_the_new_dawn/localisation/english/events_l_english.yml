@@ -1,0 +1,14 @@
+l_english:
+ # Events
+ echoes.1.t:0 "Tesla's Technocratic Call"
+ echoes.1.d:0 "Nikola Tesla has emerged from his laboratory in Belgrade, calling for a new form of government based on scientific expertise rather than traditional politics. His ideas are gaining traction among intellectuals and engineers across Serbia."
+ echoes.1.a:0 "Embrace the technocratic vision"
+ echoes.1.b:0 "Reject these radical ideas"
+ 
+ echoes.2.t:0 "The Kaiser Returns"
+ echoes.2.d:0 "After years of instability, the German people are calling for the restoration of the monarchy. The Kaiser's return could bring stability and unity to the troubled nation."
+ echoes.2.a:0 "Restore the monarchy"
+ 
+ echoes.3.t:0 "Technocratic Government"
+ echoes.3.d:0 "A new government of technical experts has been formed, promising to solve Germany's problems through scientific methods and rational planning."
+ echoes.3.a:0 "Support the technocrats"

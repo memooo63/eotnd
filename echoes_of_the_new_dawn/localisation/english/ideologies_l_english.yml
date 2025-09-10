@@ -1,0 +1,10 @@
+l_english:
+ # Ideologies
+ neo_imperialism:0 "Neo-Imperialism"
+ neo_imperialism_desc:0 "A modern form of imperialism that seeks to establish global dominance through military might and economic control."
+ 
+ technocratism:0 "Technocratism"
+ technocratism_desc:0 "Government by technical experts, prioritizing scientific advancement and efficiency over traditional politics."
+ 
+ militarist_collectivism:0 "Militarist Collectivism"
+ militarist_collectivism_desc:0 "A system where the military and state apparatus control all aspects of society for maximum efficiency and strength."

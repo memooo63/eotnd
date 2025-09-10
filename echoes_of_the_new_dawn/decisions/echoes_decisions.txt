@@ -1,0 +1,90 @@
+decisions = {
+	# Kolonien unterdrücken oder freilassen
+	colonial_repression = {
+		icon = generic_repression
+		
+		available = {
+			has_war_support = 0.3
+			any_owned_state = {
+				is_core_of = ROOT
+				NOT = { is_core_of = ROOT }
+			}
+		}
+		
+		visible = {
+			has_war_support = 0.2
+		}
+		
+		cost = 50
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 2
+				has_government = neo_imperialism
+			}
+		}
+		
+		complete_effect = {
+			add_political_power = 25
+			add_stability = -0.05
+			add_war_support = 0.1
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	# Technokraten in die Regierung holen
+	appoint_technocrats = {
+		icon = generic_government
+		
+		available = {
+			has_government = technocratism
+			NOT = { has_idea = technocrat_government }
+		}
+		
+		visible = {
+			has_government = technocratism
+		}
+		
+		cost = 100
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			add_ideas = technocrat_government
+			add_political_power = 50
+		}
+	}
+	
+	# Weltimperium ausrufen
+	declare_world_empire = {
+		icon = generic_empire
+		
+		available = {
+			has_government = neo_imperialism
+			has_war_support = 0.8
+			has_stability = 0.8
+		}
+		
+		visible = {
+			has_government = neo_imperialism
+		}
+		
+		cost = 200
+		
+		ai_will_do = {
+			factor = 1
+		}
+		
+		complete_effect = {
+			add_political_power = 100
+			add_war_support = 0.2
+			country_event = { id = echoes.4 }
+		}
+	}
+}
