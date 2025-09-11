@@ -25,6 +25,7 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
+    mutually_exclusive = { focus = GER_democracy_path focus = GER_fascism_path focus = GER_communism_path focus = GER_militarist_path }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -91,8 +92,7 @@ focus_tree = {
     x = 40
     y = 6
     cost = 10
-    prerequisite = { focus = GER_prussian_loyalty }
-    prerequisite = { focus = GER_bavarian_concessions }
+    prerequisite = { OR = { focus = GER_prussian_loyalty focus = GER_bavarian_concessions } }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -288,6 +288,7 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
+    mutually_exclusive = { focus = GER_monarchism_path focus = GER_fascism_path focus = GER_communism_path focus = GER_militarist_path }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -367,8 +368,7 @@ focus_tree = {
     x = 32
     y = 7
     cost = 10
-    prerequisite = { focus = GER_local_autonomy }
-    prerequisite = { focus = GER_civic_guard }
+    prerequisite = { OR = { focus = GER_local_autonomy focus = GER_civic_guard } }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -551,6 +551,7 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
+    mutually_exclusive = { focus = GER_monarchism_path focus = GER_democracy_path focus = GER_communism_path focus = GER_militarist_path }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -604,8 +605,7 @@ focus_tree = {
     x = 8
     y = 5
     cost = 10
-    prerequisite = { focus = GER_corporate_state }
-    prerequisite = { focus = GER_controlled_media }
+    prerequisite = { OR = { focus = GER_corporate_state focus = GER_controlled_media } }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -814,6 +814,7 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
+    mutually_exclusive = { focus = GER_monarchism_path focus = GER_democracy_path focus = GER_fascism_path focus = GER_militarist_path }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -867,8 +868,7 @@ focus_tree = {
     x = 0
     y = 5
     cost = 10
-    prerequisite = { focus = GER_collective_farms }
-    prerequisite = { focus = GER_nationalize_industry }
+    prerequisite = { OR = { focus = GER_collective_farms focus = GER_nationalize_industry } }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -1077,6 +1077,7 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
+    mutually_exclusive = { focus = GER_monarchism_path focus = GER_democracy_path focus = GER_fascism_path focus = GER_communism_path }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
@@ -1208,8 +1209,7 @@ focus_tree = {
     x = 16
     y = 11
     cost = 10
-    prerequisite = { focus = GER_airship_projects }
-    prerequisite = { focus = GER_prototype_weapons }
+    prerequisite = { OR = { focus = GER_airship_projects focus = GER_prototype_weapons } }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
