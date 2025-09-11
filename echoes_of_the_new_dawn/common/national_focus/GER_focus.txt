@@ -25,10 +25,16 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
-    mutually_exclusive = { focus = GER_democracy_path focus = GER_fascism_path focus = GER_communism_path focus = GER_militarist_path }
+    mutually_exclusive = {
+      focus = GER_democracy_path
+      focus = GER_fascism_path
+      focus = GER_communism_path
+      focus = GER_militarist_path
+    }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
+      set_politics = { ruling_party = monarchism }
       country_event = { id = echoes_ger.101 }
     }
   }
@@ -288,10 +294,16 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
-    mutually_exclusive = { focus = GER_monarchism_path focus = GER_fascism_path focus = GER_communism_path focus = GER_militarist_path }
+    mutually_exclusive = {
+      focus = GER_monarchism_path
+      focus = GER_fascism_path
+      focus = GER_communism_path
+      focus = GER_militarist_path
+    }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
+      set_politics = { ruling_party = democratic }
       country_event = { id = echoes_ger.121 }
     }
   }
@@ -551,10 +563,16 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
-    mutually_exclusive = { focus = GER_monarchism_path focus = GER_democracy_path focus = GER_communism_path focus = GER_militarist_path }
+    mutually_exclusive = {
+      focus = GER_monarchism_path
+      focus = GER_democracy_path
+      focus = GER_communism_path
+      focus = GER_militarist_path
+    }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
+      set_politics = { ruling_party = fascism }
       country_event = { id = echoes_ger.141 }
     }
   }
@@ -814,10 +832,16 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
-    mutually_exclusive = { focus = GER_monarchism_path focus = GER_democracy_path focus = GER_fascism_path focus = GER_militarist_path }
+    mutually_exclusive = {
+      focus = GER_monarchism_path
+      focus = GER_democracy_path
+      focus = GER_fascism_path
+      focus = GER_militarist_path
+    }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
+      set_politics = { ruling_party = communism }
       country_event = { id = echoes_ger.161 }
     }
   }
@@ -1077,10 +1101,16 @@ focus_tree = {
     y = 1
     cost = 10
     prerequisite = { focus = GER_rebuild_nation }
-    mutually_exclusive = { focus = GER_monarchism_path focus = GER_democracy_path focus = GER_fascism_path focus = GER_communism_path }
+    mutually_exclusive = {
+      focus = GER_monarchism_path
+      focus = GER_democracy_path
+      focus = GER_fascism_path
+      focus = GER_communism_path
+    }
     ai_will_do = { factor = 1 }
     completion_reward = {
       add_political_power = 25
+      set_politics = { ruling_party = militarist_collectivism }
       country_event = { id = echoes_ger.181 }
     }
   }
