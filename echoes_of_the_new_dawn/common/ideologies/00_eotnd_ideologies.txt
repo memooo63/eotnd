@@ -1,0 +1,54 @@
+monarchism = {
+  types = { monarchy_authoritarian monarchy_constitutional }
+  color = { 0.60 0.60 0.20 }
+  can_declare_war_without_wargoal = yes
+  faction_creation = yes
+  join_faction_tension = 0.25
+  ai_wants_peace = 0.2
+  ai_wants_war = 0.3
+  drift_defence_factor = 0.20
+}
+
+fascism = {
+  types = { fascist_dictatorship }
+  color = { 0.20 0.20 0.20 }
+  can_declare_war_without_wargoal = yes
+  faction_creation = yes
+  join_faction_tension = 0.0
+  ai_wants_peace = 0.0
+  ai_wants_war = 0.8
+  drift_defence_factor = 0.15
+}
+
+communism = {
+  types = { council_socialism }
+  color = { 0.80 0.10 0.10 }
+  can_declare_war_without_wargoal = no
+  faction_creation = yes
+  join_faction_tension = 0.5
+  ai_wants_peace = 0.4
+  ai_wants_war = 0.4
+  drift_defence_factor = 0.25
+}
+
+democratic = {
+  types = { liberal_democracy }
+  color = { 0.10 0.30 0.80 }
+  can_declare_war_without_wargoal = no
+  faction_creation = yes
+  join_faction_tension = 0.5
+  ai_wants_peace = 0.7
+  ai_wants_war = 0.1
+  drift_defence_factor = 0.30
+}
+
+militarist_collectivism = {
+  types = { junta corporatist_collective }
+  color = { 0.30 0.50 0.30 }
+  can_declare_war_without_wargoal = yes
+  faction_creation = yes
+  join_faction_tension = 0.1
+  ai_wants_peace = 0.1
+  ai_wants_war = 0.6
+  drift_defence_factor = 0.20
+}

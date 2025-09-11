@@ -1,618 +1,1336 @@
 focus_tree = {
-	id = GER_focus
-	country = {
-		factor = 0
-		modifier = {
-			add = 10
-			tag = GER
-		}
-	}
-	
-	default = no
-	
-	# ROOT FOCUS
-	focus = {
-		id = GER_stability_of_reich
-		icon = GFX_goal_generic_political_reform
-		x = 4
-		y = 0
-		cost = 10
-		
-		ai_will_do = {
-			factor = 10
-		}
-		
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.1
-			country_event = { id = echoes.100 }
-		}
-	}
-	
-	# MONARCHIST RESTORATION BRANCH
-	focus = {
-		id = GER_restore_monarchy
-		icon = GFX_goal_generic_political_reform
-		x = 1
-		y = 1
-		cost = 10
-		
-		prerequisite = { focus = GER_stability_of_reich }
-		
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				has_government = technocratism
-			}
-			modifier = {
-				factor = 0
-				has_government = militarist_collectivism
-			}
-		}
-		
-		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.15
-			country_event = { id = echoes.101 }
-		}
-	}
-	
-	focus = {
-		id = GER_crown_kaiser
-		icon = GFX_goal_generic_political_reform
-		x = 1
-		y = 2
-		cost = 10
-		
-		prerequisite = { focus = GER_restore_monarchy }
-		
-		completion_reward = {
-			add_political_power = 200
-			add_war_support = 0.1
-			add_ideas = GER_imperial_restoration
-			country_event = { id = echoes.102 }
-		}
-	}
-	
-	focus = {
-		id = GER_imperial_alliance
-		icon = GFX_goal_generic_allies_build_infantry
-		x = 0
-		y = 3
-		cost = 10
-		
-		prerequisite = { focus = GER_crown_kaiser }
-		
-		completion_reward = {
-			add_political_power = 100
-			create_faction = GER_imperial_alliance
-			country_event = { id = echoes.103 }
-		}
-	}
-	
-	focus = {
-		id = GER_reclaim_colonies
-		icon = GFX_goal_generic_navy_cruiser
-		x = 2
-		y = 3
-		cost = 10
-		
-		prerequisite = { focus = GER_crown_kaiser }
-		
-		completion_reward = {
-			add_political_power = 150
-			add_war_support = 0.15
-			country_event = { id = echoes.104 }
-		}
-	}
-	
-	focus = {
-		id = GER_naval_expansion
-		icon = GFX_goal_generic_navy_battleship
-		x = 1
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_reclaim_colonies }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = naval_doctrine
-				bonus = 0.5
-				uses = 2
-			}
-			country_event = { id = echoes.105 }
-		}
-	}
-	
-	focus = {
-		id = GER_global_empire
-		icon = GFX_goal_generic_political_reform
-		x = 1
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_naval_expansion }
-		
-		completion_reward = {
-			add_political_power = 200
-			add_war_support = 0.2
-			add_ideas = GER_global_empire_ideology
-			country_event = { id = echoes.106 }
-		}
-	}
-	
-	focus = {
-		id = GER_imperial_economy
-		icon = GFX_goal_generic_construct_civilian
-		x = 0
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_imperial_alliance }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = industry
-				bonus = 0.3
-				uses = 2
-			}
-			country_event = { id = echoes.107 }
-		}
-	}
-	
-	focus = {
-		id = GER_imperial_army
-		icon = GFX_goal_generic_army_infantry
-		x = 2
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_reclaim_colonies }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = land_doctrine
-				bonus = 0.3
-				uses = 2
-			}
-			country_event = { id = echoes.108 }
-		}
-	}
-	
-	# TECHNOCRACY BRANCH
-	focus = {
-		id = GER_technocrat_movement
-		icon = GFX_goal_generic_construct_infantry
-		x = 4
-		y = 1
-		cost = 10
-		
-		prerequisite = { focus = GER_stability_of_reich }
-		
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				has_government = democratic
-			}
-			modifier = {
-				factor = 0
-				has_government = militarist_collectivism
-			}
-		}
-		
-		completion_reward = {
-			add_political_power = 150
-			add_stability = 0.1
-			country_event = { id = echoes.109 }
-		}
-	}
-	
-	focus = {
-		id = GER_invite_tesla
-		icon = GFX_goal_generic_construct_infantry
-		x = 4
-		y = 2
-		cost = 10
-		
-		prerequisite = { focus = GER_technocrat_movement }
-		
-		completion_reward = {
-			add_political_power = 200
-			add_tech_bonus = {
-				name = electronics
-				bonus = 1.0
-				uses = 3
-			}
-			country_event = { id = echoes.110 }
-		}
-	}
-	
-	focus = {
-		id = GER_dieselpunk_research
-		icon = GFX_goal_generic_construct_infantry
-		x = 3
-		y = 3
-		cost = 10
-		
-		prerequisite = { focus = GER_invite_tesla }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = industry
-				bonus = 0.5
-				uses = 2
-			}
-			country_event = { id = echoes.111 }
-		}
-	}
-	
-	focus = {
-		id = GER_airship_program
-		icon = GFX_goal_generic_air_aircraft
-		x = 5
-		y = 3
-		cost = 10
-		
-		prerequisite = { focus = GER_invite_tesla }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = air_doctrine
-				bonus = 0.5
-				uses = 2
-			}
-			country_event = { id = echoes.112 }
-		}
-	}
-	
-	focus = {
-		id = GER_experimental_weapons
-		icon = GFX_goal_generic_construct_infantry
-		x = 4
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_dieselpunk_research }
-		
-		completion_reward = {
-			add_political_power = 150
-			add_tech_bonus = {
-				name = land_doctrine
-				bonus = 0.7
-				uses = 2
-			}
-			country_event = { id = echoes.113 }
-		}
-	}
-	
-	focus = {
-		id = GER_industrial_supremacy
-		icon = GFX_goal_generic_construct_civilian
-		x = 3
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_dieselpunk_research }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = industry
-				bonus = 0.8
-				uses = 3
-			}
-			country_event = { id = echoes.114 }
-		}
-	}
-	
-	focus = {
-		id = GER_science_diplomacy
-		icon = GFX_goal_generic_political_reform
-		x = 5
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_airship_program }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = electronics
-				bonus = 0.5
-				uses = 2
-			}
-			country_event = { id = echoes.115 }
-		}
-	}
-	
-	focus = {
-		id = GER_technocrat_government
-		icon = GFX_goal_generic_political_reform
-		x = 4
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_experimental_weapons }
-		
-		completion_reward = {
-			add_political_power = 200
-			add_stability = 0.2
-			add_ideas = GER_technocrat_government_ideology
-			country_event = { id = echoes.116 }
-		}
-	}
-	
-	# COLLECTIVIST MILITARY JUNTA BRANCH
-	focus = {
-		id = GER_military_collectivism
-		icon = GFX_goal_generic_army_infantry
-		x = 7
-		y = 1
-		cost = 10
-		
-		prerequisite = { focus = GER_stability_of_reich }
-		
-		ai_will_do = {
-			factor = 10
-			modifier = {
-				factor = 0
-				has_government = democratic
-			}
-			modifier = {
-				factor = 0
-				has_government = technocratism
-			}
-		}
-		
-		completion_reward = {
-			add_political_power = 150
-			add_war_support = 0.1
-			country_event = { id = echoes.117 }
-		}
-	}
-	
-	focus = {
-		id = GER_military_rule
-		icon = GFX_goal_generic_army_infantry
-		x = 7
-		y = 2
-		cost = 10
-		
-		prerequisite = { focus = GER_military_collectivism }
-		
-		completion_reward = {
-			add_political_power = 200
-			add_war_support = 0.15
-			add_ideas = GER_military_junta
-			country_event = { id = echoes.118 }
-		}
-	}
-	
-	focus = {
-		id = GER_war_economy
-		icon = GFX_goal_generic_construct_civilian
-		x = 6
-		y = 3
-		cost = 10
-		
-		prerequisite = { focus = GER_military_rule }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = industry
-				bonus = 0.4
-				uses = 2
-			}
-			country_event = { id = echoes.119 }
-		}
-	}
-	
-	focus = {
-		id = GER_militarized_society
-		icon = GFX_goal_generic_army_infantry
-		x = 8
-		y = 3
-		cost = 10
-		
-		prerequisite = { focus = GER_military_rule }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = land_doctrine
-				bonus = 0.4
-				uses = 2
-			}
-			country_event = { id = echoes.120 }
-		}
-	}
-	
-	focus = {
-		id = GER_expansionism
-		icon = GFX_goal_generic_army_infantry
-		x = 7
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_war_economy }
-		
-		completion_reward = {
-			add_political_power = 150
-			add_war_support = 0.2
-			country_event = { id = echoes.121 }
-		}
-	}
-	
-	focus = {
-		id = GER_worker_soldier_unity
-		icon = GFX_goal_generic_construct_infantry
-		x = 6
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_war_economy }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = industry
-				bonus = 0.3
-				uses = 2
-			}
-			country_event = { id = echoes.122 }
-		}
-	}
-	
-	focus = {
-		id = GER_resource_extraction
-		icon = GFX_goal_generic_construct_civilian
-		x = 8
-		y = 4
-		cost = 10
-		
-		prerequisite = { focus = GER_militarized_society }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = industry
-				bonus = 0.3
-				uses = 2
-			}
-			country_event = { id = echoes.123 }
-		}
-	}
-	
-	focus = {
-		id = GER_authoritarian_ideology
-		icon = GFX_goal_generic_political_reform
-		x = 7
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_expansionism }
-		
-		completion_reward = {
-			add_political_power = 200
-			add_war_support = 0.25
-			add_ideas = GER_authoritarian_ideology_effect
-			country_event = { id = echoes.124 }
-		}
-	}
-	
-	# MUTUALLY EXCLUSIVE CHOICES
-	focus = {
-		id = GER_wilhelm_iii
-		icon = GFX_goal_generic_political_reform
-		x = 0
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_crown_kaiser }
-		mutually_exclusive = { focus = GER_compromise_monarch }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.1
-			country_event = { id = echoes.125 }
-		}
-	}
-	
-	focus = {
-		id = GER_compromise_monarch
-		icon = GFX_goal_generic_political_reform
-		x = 2
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_crown_kaiser }
-		mutually_exclusive = { focus = GER_wilhelm_iii }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.1
-			country_event = { id = echoes.126 }
-		}
-	}
-	
-	focus = {
-		id = GER_tesla_conflict
-		icon = GFX_goal_generic_construct_infantry
-		x = 3
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_invite_tesla }
-		mutually_exclusive = { focus = GER_tesla_cooperation }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.1
-			country_event = { id = echoes.127 }
-		}
-	}
-	
-	focus = {
-		id = GER_tesla_cooperation
-		icon = GFX_goal_generic_construct_infantry
-		x = 5
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_invite_tesla }
-		mutually_exclusive = { focus = GER_tesla_conflict }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_tech_bonus = {
-				name = electronics
-				bonus = 0.5
-				uses = 2
-			}
-			country_event = { id = echoes.128 }
-		}
-	}
-	
-	focus = {
-		id = GER_hardline_junta
-		icon = GFX_goal_generic_army_infantry
-		x = 6
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_military_rule }
-		mutually_exclusive = { focus = GER_moderate_junta }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_war_support = 0.15
-			country_event = { id = echoes.129 }
-		}
-	}
-	
-	focus = {
-		id = GER_moderate_junta
-		icon = GFX_goal_generic_army_infantry
-		x = 8
-		y = 5
-		cost = 10
-		
-		prerequisite = { focus = GER_military_rule }
-		mutually_exclusive = { focus = GER_hardline_junta }
-		
-		completion_reward = {
-			add_political_power = 100
-			add_stability = 0.1
-			country_event = { id = echoes.130 }
-		}
-	}
+  id = GER_focus
+  country = {
+    factor = 0
+    modifier = { add = 10 tag = GER }
+  }
+  default = no
+  focus = {
+    id = GER_rebuild_nation
+    icon = GFX_goal_generic_political_reform
+    x = 24
+    y = 0
+    cost = 10
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 50
+      add_stability = 0.05
+      country_event = { id = echoes_ger.100 }
+    }
+  }
+  focus = {
+    id = GER_monarchism_path
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 1
+    cost = 10
+    prerequisite = { focus = GER_rebuild_nation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.101 }
+    }
+  }
+  focus = {
+    id = GER_reinstate_crown
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 2
+    cost = 10
+    prerequisite = { focus = GER_monarchism_path }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.102 }
+    }
+  }
+  focus = {
+    id = GER_royal_reconstruction
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 3
+    cost = 10
+    prerequisite = { focus = GER_reinstate_crown }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.103 }
+    }
+  }
+  focus = {
+    id = GER_prussian_loyalty
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 4
+    cost = 10
+    prerequisite = { focus = GER_royal_reconstruction }
+    mutually_exclusive = { focus = GER_bavarian_concessions }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.104 }
+    }
+  }
+  focus = {
+    id = GER_bavarian_concessions
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 5
+    cost = 10
+    prerequisite = { focus = GER_royal_reconstruction }
+    mutually_exclusive = { focus = GER_prussian_loyalty }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.105 }
+    }
+  }
+  focus = {
+    id = GER_heritage_education
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 6
+    cost = 10
+    prerequisite = { focus = GER_prussian_loyalty }
+    prerequisite = { focus = GER_bavarian_concessions }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.106 }
+    }
+  }
+  focus = {
+    id = GER_aristocratic_council
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 7
+    cost = 10
+    prerequisite = { focus = GER_heritage_education }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.107 }
+    }
+  }
+  focus = {
+    id = GER_court_industry_ties
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 8
+    cost = 10
+    prerequisite = { focus = GER_aristocratic_council }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.108 }
+    }
+  }
+  focus = {
+    id = GER_imperial_guard
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 9
+    cost = 10
+    prerequisite = { focus = GER_court_industry_ties }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.109 }
+    }
+  }
+  focus = {
+    id = GER_restore_diplomacy
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 10
+    cost = 10
+    prerequisite = { focus = GER_imperial_guard }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.110 }
+    }
+  }
+  focus = {
+    id = GER_claim_old_lands
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 11
+    cost = 10
+    prerequisite = { focus = GER_restore_diplomacy }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.111 }
+    }
+  }
+  focus = {
+    id = GER_colonial_revocation
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 12
+    cost = 10
+    prerequisite = { focus = GER_claim_old_lands }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.112 }
+    }
+  }
+  focus = {
+    id = GER_naval_pride
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 13
+    cost = 10
+    prerequisite = { focus = GER_colonial_revocation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.113 }
+    }
+  }
+  focus = {
+    id = GER_imperial_infrastructure
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 14
+    cost = 10
+    prerequisite = { focus = GER_naval_pride }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.114 }
+    }
+  }
+  focus = {
+    id = GER_westward_assertion
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 15
+    cost = 10
+    prerequisite = { focus = GER_imperial_infrastructure }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.115 }
+    }
+  }
+  focus = {
+    id = GER_eastern_compacts
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 16
+    cost = 10
+    prerequisite = { focus = GER_westward_assertion }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.116 }
+    }
+  }
+  focus = {
+    id = GER_imperial_federation
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 17
+    cost = 10
+    prerequisite = { focus = GER_eastern_compacts }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.117 }
+    }
+  }
+  focus = {
+    id = GER_reunite_empire
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 18
+    cost = 10
+    prerequisite = { focus = GER_imperial_federation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.118 }
+    }
+  }
+  focus = {
+    id = GER_royal_constitution
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 19
+    cost = 10
+    prerequisite = { focus = GER_reunite_empire }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.119 }
+    }
+  }
+  focus = {
+    id = GER_kaiser_reigns
+    icon = GFX_goal_generic_political_reform
+    x = 40
+    y = 20
+    cost = 10
+    prerequisite = { focus = GER_royal_constitution }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.120 }
+    }
+  }
+  focus = {
+    id = GER_democracy_path
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 1
+    cost = 10
+    prerequisite = { focus = GER_rebuild_nation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.121 }
+    }
+  }
+  focus = {
+    id = GER_parliament_reform
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 2
+    cost = 10
+    prerequisite = { focus = GER_democracy_path }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.122 }
+    }
+  }
+  focus = {
+    id = GER_expand_franchise
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 3
+    cost = 10
+    prerequisite = { focus = GER_parliament_reform }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.123 }
+    }
+  }
+  focus = {
+    id = GER_civil_service
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 4
+    cost = 10
+    prerequisite = { focus = GER_expand_franchise }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.124 }
+    }
+  }
+  focus = {
+    id = GER_local_autonomy
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 5
+    cost = 10
+    prerequisite = { focus = GER_civil_service }
+    mutually_exclusive = { focus = GER_civic_guard }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.125 }
+    }
+  }
+  focus = {
+    id = GER_civic_guard
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 6
+    cost = 10
+    prerequisite = { focus = GER_civil_service }
+    mutually_exclusive = { focus = GER_local_autonomy }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.126 }
+    }
+  }
+  focus = {
+    id = GER_labor_rights
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 7
+    cost = 10
+    prerequisite = { focus = GER_local_autonomy }
+    prerequisite = { focus = GER_civic_guard }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.127 }
+    }
+  }
+  focus = {
+    id = GER_social_welfare
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 8
+    cost = 10
+    prerequisite = { focus = GER_labor_rights }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.128 }
+    }
+  }
+  focus = {
+    id = GER_free_press
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 9
+    cost = 10
+    prerequisite = { focus = GER_social_welfare }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.129 }
+    }
+  }
+  focus = {
+    id = GER_university_funding
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 10
+    cost = 10
+    prerequisite = { focus = GER_free_press }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.130 }
+    }
+  }
+  focus = {
+    id = GER_international_mediation
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 11
+    cost = 10
+    prerequisite = { focus = GER_university_funding }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.131 }
+    }
+  }
+  focus = {
+    id = GER_western_partnership
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 12
+    cost = 10
+    prerequisite = { focus = GER_international_mediation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.132 }
+    }
+  }
+  focus = {
+    id = GER_collective_security
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 13
+    cost = 10
+    prerequisite = { focus = GER_western_partnership }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.133 }
+    }
+  }
+  focus = {
+    id = GER_trade_liberalization
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 14
+    cost = 10
+    prerequisite = { focus = GER_collective_security }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.134 }
+    }
+  }
+  focus = {
+    id = GER_democratic_culture
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 15
+    cost = 10
+    prerequisite = { focus = GER_trade_liberalization }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.135 }
+    }
+  }
+  focus = {
+    id = GER_liberal_constitution
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 16
+    cost = 10
+    prerequisite = { focus = GER_democratic_culture }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.136 }
+    }
+  }
+  focus = {
+    id = GER_anti_corruption
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 17
+    cost = 10
+    prerequisite = { focus = GER_liberal_constitution }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.137 }
+    }
+  }
+  focus = {
+    id = GER_electoral_revival
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 18
+    cost = 10
+    prerequisite = { focus = GER_anti_corruption }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.138 }
+    }
+  }
+  focus = {
+    id = GER_defensive_coalitions
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 19
+    cost = 10
+    prerequisite = { focus = GER_electoral_revival }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.139 }
+    }
+  }
+  focus = {
+    id = GER_people_rule
+    icon = GFX_goal_generic_political_reform
+    x = 32
+    y = 20
+    cost = 10
+    prerequisite = { focus = GER_defensive_coalitions }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.140 }
+    }
+  }
+  focus = {
+    id = GER_fascism_path
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 1
+    cost = 10
+    prerequisite = { focus = GER_rebuild_nation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.141 }
+    }
+  }
+  focus = {
+    id = GER_party_militias
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 2
+    cost = 10
+    prerequisite = { focus = GER_fascism_path }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.142 }
+    }
+  }
+  focus = {
+    id = GER_corporate_state
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 3
+    cost = 10
+    prerequisite = { focus = GER_party_militias }
+    mutually_exclusive = { focus = GER_controlled_media }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.143 }
+    }
+  }
+  focus = {
+    id = GER_controlled_media
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 4
+    cost = 10
+    prerequisite = { focus = GER_party_militias }
+    mutually_exclusive = { focus = GER_corporate_state }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.144 }
+    }
+  }
+  focus = {
+    id = GER_youth_indoctrination
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 5
+    cost = 10
+    prerequisite = { focus = GER_corporate_state }
+    prerequisite = { focus = GER_controlled_media }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.145 }
+    }
+  }
+  focus = {
+    id = GER_one_party_rule
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 6
+    cost = 10
+    prerequisite = { focus = GER_youth_indoctrination }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.146 }
+    }
+  }
+  focus = {
+    id = GER_paramilitary_training
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 7
+    cost = 10
+    prerequisite = { focus = GER_one_party_rule }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.147 }
+    }
+  }
+  focus = {
+    id = GER_repression_measures
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 8
+    cost = 10
+    prerequisite = { focus = GER_paramilitary_training }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.148 }
+    }
+  }
+  focus = {
+    id = GER_industry_alignment
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 9
+    cost = 10
+    prerequisite = { focus = GER_repression_measures }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.149 }
+    }
+  }
+  focus = {
+    id = GER_total_mobilization
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 10
+    cost = 10
+    prerequisite = { focus = GER_industry_alignment }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.150 }
+    }
+  }
+  focus = {
+    id = GER_expansionist_rhetoric
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 11
+    cost = 10
+    prerequisite = { focus = GER_total_mobilization }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.151 }
+    }
+  }
+  focus = {
+    id = GER_border_incidents
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 12
+    cost = 10
+    prerequisite = { focus = GER_expansionist_rhetoric }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.152 }
+    }
+  }
+  focus = {
+    id = GER_centralized_economy
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 13
+    cost = 10
+    prerequisite = { focus = GER_border_incidents }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.153 }
+    }
+  }
+  focus = {
+    id = GER_purge_dissent
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 14
+    cost = 10
+    prerequisite = { focus = GER_centralized_economy }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.154 }
+    }
+  }
+  focus = {
+    id = GER_legacy_myths
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 15
+    cost = 10
+    prerequisite = { focus = GER_purge_dissent }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.155 }
+    }
+  }
+  focus = {
+    id = GER_mass_rallies
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 16
+    cost = 10
+    prerequisite = { focus = GER_legacy_myths }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.156 }
+    }
+  }
+  focus = {
+    id = GER_authoritarian_science
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 17
+    cost = 10
+    prerequisite = { focus = GER_mass_rallies }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.157 }
+    }
+  }
+  focus = {
+    id = GER_war_preparations
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 18
+    cost = 10
+    prerequisite = { focus = GER_authoritarian_science }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.158 }
+    }
+  }
+  focus = {
+    id = GER_demand_territories
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 19
+    cost = 10
+    prerequisite = { focus = GER_war_preparations }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.159 }
+    }
+  }
+  focus = {
+    id = GER_uncompromising_rule
+    icon = GFX_goal_generic_political_reform
+    x = 8
+    y = 20
+    cost = 10
+    prerequisite = { focus = GER_demand_territories }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.160 }
+    }
+  }
+  focus = {
+    id = GER_communism_path
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 1
+    cost = 10
+    prerequisite = { focus = GER_rebuild_nation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.161 }
+    }
+  }
+  focus = {
+    id = GER_workers_councils
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 2
+    cost = 10
+    prerequisite = { focus = GER_communism_path }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.162 }
+    }
+  }
+  focus = {
+    id = GER_collective_farms
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 3
+    cost = 10
+    prerequisite = { focus = GER_workers_councils }
+    mutually_exclusive = { focus = GER_nationalize_industry }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.163 }
+    }
+  }
+  focus = {
+    id = GER_nationalize_industry
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 4
+    cost = 10
+    prerequisite = { focus = GER_workers_councils }
+    mutually_exclusive = { focus = GER_collective_farms }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.164 }
+    }
+  }
+  focus = {
+    id = GER_red_guard
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 5
+    cost = 10
+    prerequisite = { focus = GER_collective_farms }
+    prerequisite = { focus = GER_nationalize_industry }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.165 }
+    }
+  }
+  focus = {
+    id = GER_party_cadre_training
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 6
+    cost = 10
+    prerequisite = { focus = GER_red_guard }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.166 }
+    }
+  }
+  focus = {
+    id = GER_political_commissars
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 7
+    cost = 10
+    prerequisite = { focus = GER_party_cadre_training }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.167 }
+    }
+  }
+  focus = {
+    id = GER_education_reform
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 8
+    cost = 10
+    prerequisite = { focus = GER_political_commissars }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.168 }
+    }
+  }
+  focus = {
+    id = GER_propaganda_bureau
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 9
+    cost = 10
+    prerequisite = { focus = GER_education_reform }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.169 }
+    }
+  }
+  focus = {
+    id = GER_internationalism
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 10
+    cost = 10
+    prerequisite = { focus = GER_propaganda_bureau }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.170 }
+    }
+  }
+  focus = {
+    id = GER_support_world_revolution
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 11
+    cost = 10
+    prerequisite = { focus = GER_internationalism }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.171 }
+    }
+  }
+  focus = {
+    id = GER_unite_left_factions
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 12
+    cost = 10
+    prerequisite = { focus = GER_support_world_revolution }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.172 }
+    }
+  }
+  focus = {
+    id = GER_state_planning
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 13
+    cost = 10
+    prerequisite = { focus = GER_unite_left_factions }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.173 }
+    }
+  }
+  focus = {
+    id = GER_anti_royalist_campaign
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 14
+    cost = 10
+    prerequisite = { focus = GER_state_planning }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.174 }
+    }
+  }
+  focus = {
+    id = GER_workers_militias
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 15
+    cost = 10
+    prerequisite = { focus = GER_anti_royalist_campaign }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.175 }
+    }
+  }
+  focus = {
+    id = GER_subvert_neighbors
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 16
+    cost = 10
+    prerequisite = { focus = GER_workers_militias }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.176 }
+    }
+  }
+  focus = {
+    id = GER_soviet_ties
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 17
+    cost = 10
+    prerequisite = { focus = GER_subvert_neighbors }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.177 }
+    }
+  }
+  focus = {
+    id = GER_ideological_purity
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 18
+    cost = 10
+    prerequisite = { focus = GER_soviet_ties }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.178 }
+    }
+  }
+  focus = {
+    id = GER_commune_expansion
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 19
+    cost = 10
+    prerequisite = { focus = GER_ideological_purity }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.179 }
+    }
+  }
+  focus = {
+    id = GER_communist_vanguard
+    icon = GFX_goal_generic_political_reform
+    x = 0
+    y = 20
+    cost = 10
+    prerequisite = { focus = GER_commune_expansion }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.180 }
+    }
+  }
+  focus = {
+    id = GER_militarist_path
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 1
+    cost = 10
+    prerequisite = { focus = GER_rebuild_nation }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.181 }
+    }
+  }
+  focus = {
+    id = GER_military_cabinet
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 2
+    cost = 10
+    prerequisite = { focus = GER_militarist_path }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.182 }
+    }
+  }
+  focus = {
+    id = GER_conscription_plan
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 3
+    cost = 10
+    prerequisite = { focus = GER_military_cabinet }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.183 }
+    }
+  }
+  focus = {
+    id = GER_officer_promotion
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 4
+    cost = 10
+    prerequisite = { focus = GER_conscription_plan }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.184 }
+    }
+  }
+  focus = {
+    id = GER_military_industry
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 5
+    cost = 10
+    prerequisite = { focus = GER_officer_promotion }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.185 }
+    }
+  }
+  focus = {
+    id = GER_fortify_borders
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 6
+    cost = 10
+    prerequisite = { focus = GER_military_industry }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.186 }
+    }
+  }
+  focus = {
+    id = GER_military_education
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 7
+    cost = 10
+    prerequisite = { focus = GER_fortify_borders }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.187 }
+    }
+  }
+  focus = {
+    id = GER_war_games
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 8
+    cost = 10
+    prerequisite = { focus = GER_military_education }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.188 }
+    }
+  }
+  focus = {
+    id = GER_airship_projects
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 9
+    cost = 10
+    prerequisite = { focus = GER_war_games }
+    mutually_exclusive = { focus = GER_prototype_weapons }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.189 }
+    }
+  }
+  focus = {
+    id = GER_prototype_weapons
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 10
+    cost = 10
+    prerequisite = { focus = GER_war_games }
+    mutually_exclusive = { focus = GER_airship_projects }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.190 }
+    }
+  }
+  focus = {
+    id = GER_army_restructuring
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 11
+    cost = 10
+    prerequisite = { focus = GER_airship_projects }
+    prerequisite = { focus = GER_prototype_weapons }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.191 }
+    }
+  }
+  focus = {
+    id = GER_navy_reorganization
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 12
+    cost = 10
+    prerequisite = { focus = GER_army_restructuring }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.192 }
+    }
+  }
+  focus = {
+    id = GER_air_corps
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 13
+    cost = 10
+    prerequisite = { focus = GER_navy_reorganization }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.193 }
+    }
+  }
+  focus = {
+    id = GER_combined_arms
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 14
+    cost = 10
+    prerequisite = { focus = GER_air_corps }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.194 }
+    }
+  }
+  focus = {
+    id = GER_frontline_engineering
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 15
+    cost = 10
+    prerequisite = { focus = GER_combined_arms }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.195 }
+    }
+  }
+  focus = {
+    id = GER_supply_modernization
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 16
+    cost = 10
+    prerequisite = { focus = GER_frontline_engineering }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.196 }
+    }
+  }
+  focus = {
+    id = GER_military_research_council
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 17
+    cost = 10
+    prerequisite = { focus = GER_supply_modernization }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.197 }
+    }
+  }
+  focus = {
+    id = GER_high_command_authority
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 18
+    cost = 10
+    prerequisite = { focus = GER_military_research_council }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.198 }
+    }
+  }
+  focus = {
+    id = GER_prepare_campaigns
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 19
+    cost = 10
+    prerequisite = { focus = GER_high_command_authority }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.199 }
+    }
+  }
+  focus = {
+    id = GER_martial_state
+    icon = GFX_goal_generic_political_reform
+    x = 16
+    y = 20
+    cost = 10
+    prerequisite = { focus = GER_prepare_campaigns }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+      add_political_power = 25
+      country_event = { id = echoes_ger.200 }
+    }
+  }
 }
