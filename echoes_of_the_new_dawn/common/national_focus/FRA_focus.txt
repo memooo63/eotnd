@@ -1,0 +1,1316 @@
+focus_tree = {
+ id = FRA_focus
+ country = { tag = FRA }
+ focus = {
+  id = FRA_assess_armistice
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 0
+  cost = 10
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.300 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_reconnect_royalists
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 1
+  cost = 10
+  prerequisite = { focus = FRA_assess_armistice }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.301 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_nobility_network
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 2
+  cost = 10
+  prerequisite = { focus = FRA_reconnect_royalists }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.302 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_provincial_monarchist_clubs
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 3
+  cost = 10
+  prerequisite = { focus = FRA_nobility_network }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.303 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_restore_ceremonies
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 4
+  cost = 10
+  prerequisite = { focus = FRA_provincial_monarchist_clubs }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.304 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_claimant_councils
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 5
+  cost = 10
+  prerequisite = { focus = FRA_restore_ceremonies }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.305 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_orleanist_outreach
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 6
+  cost = 10
+  prerequisite = { focus = FRA_claimant_councils }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.306 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_bonapartist_appeals
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 7
+  cost = 10
+  prerequisite = { focus = FRA_orleanist_outreach }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.307 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_royal_referendum
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 8
+  cost = 10
+  prerequisite = { focus = FRA_bonapartist_appeals }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.308 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_crown_charter
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 9
+  cost = 10
+  prerequisite = { focus = FRA_royal_referendum }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.309 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_royal_guards
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 10
+  cost = 10
+  prerequisite = { focus = FRA_crown_charter }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.310 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_noble_tax_reform
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 11
+  cost = 10
+  prerequisite = { focus = FRA_royal_guards }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.311 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_colonial_dynasts
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 12
+  cost = 10
+  prerequisite = { focus = FRA_noble_tax_reform }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.312 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_court_diplomacy
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 13
+  cost = 10
+  prerequisite = { focus = FRA_colonial_dynasts }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.313 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_overseas_titles
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 14
+  cost = 10
+  prerequisite = { focus = FRA_court_diplomacy }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.314 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_dynastic_marriages
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 15
+  cost = 10
+  prerequisite = { focus = FRA_overseas_titles }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.315 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_imperial_concordat
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 16
+  cost = 10
+  prerequisite = { focus = FRA_dynastic_marriages }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.316 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_royal_economic_board
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 17
+  cost = 10
+  prerequisite = { focus = FRA_imperial_concordat }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.317 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_council_of_peers
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 18
+  cost = 10
+  prerequisite = { focus = FRA_royal_economic_board }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.318 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_crowned_assemblies
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 19
+  cost = 10
+  prerequisite = { focus = FRA_council_of_peers }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.319 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_legacy_of_empire
+  icon = GFX_goal_generic_political_reform
+  x = 0
+  y = 20
+  cost = 10
+  prerequisite = { focus = FRA_crowned_assemblies }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.320 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_renew_republic
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 1
+  cost = 10
+  prerequisite = { focus = FRA_assess_armistice }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.321 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_civil_service_review
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 2
+  cost = 10
+  prerequisite = { focus = FRA_renew_republic }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.322 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_worker_representation
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 3
+  cost = 10
+  prerequisite = { focus = FRA_civil_service_review }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.323 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_electoral_reforms
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 4
+  cost = 10
+  prerequisite = { focus = FRA_worker_representation }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.324 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_emergency_mandate
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 5
+  cost = 10
+  prerequisite = { focus = FRA_electoral_reforms }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.325 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_rights_charter
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 6
+  cost = 10
+  prerequisite = { focus = FRA_emergency_mandate }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.326 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_senate_consultation
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 7
+  cost = 10
+  prerequisite = { focus = FRA_rights_charter }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.327 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_civil_liberties
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 8
+  cost = 10
+  prerequisite = { focus = FRA_senate_consultation }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.328 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_press_guarantees
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 9
+  cost = 10
+  prerequisite = { focus = FRA_civil_liberties }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.329 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_education_initiative
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 10
+  cost = 10
+  prerequisite = { focus = FRA_press_guarantees }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.330 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_welfare_measures
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 11
+  cost = 10
+  prerequisite = { focus = FRA_education_initiative }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.331 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_industrial_arbitration
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 12
+  cost = 10
+  prerequisite = { focus = FRA_welfare_measures }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.332 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_regional_autonomy
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 13
+  cost = 10
+  prerequisite = { focus = FRA_industrial_arbitration }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.333 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_diplomatic_mission
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 14
+  cost = 10
+  prerequisite = { focus = FRA_regional_autonomy }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.334 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_league_negotiations
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 15
+  cost = 10
+  prerequisite = { focus = FRA_diplomatic_mission }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.335 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_defensive_stance
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 16
+  cost = 10
+  prerequisite = { focus = FRA_league_negotiations }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.336 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_international_aid
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 17
+  cost = 10
+  prerequisite = { focus = FRA_defensive_stance }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.337 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_democratic_coalition
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 18
+  cost = 10
+  prerequisite = { focus = FRA_international_aid }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.338 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_popular_mandate
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 19
+  cost = 10
+  prerequisite = { focus = FRA_democratic_coalition }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.339 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_guardian_of_liberty
+  icon = GFX_goal_generic_political_reform
+  x = 12
+  y = 20
+  cost = 10
+  prerequisite = { focus = FRA_popular_mandate }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.340 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_nationalist_leagues
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 1
+  cost = 10
+  prerequisite = { focus = FRA_assess_armistice }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.341 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_street_organizing
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 2
+  cost = 10
+  prerequisite = { focus = FRA_nationalist_leagues }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.342 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_paramilitary_training
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 3
+  cost = 10
+  prerequisite = { focus = FRA_street_organizing }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.343 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_central_propaganda
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 4
+  cost = 10
+  prerequisite = { focus = FRA_paramilitary_training }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.344 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_leader_cult
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 5
+  cost = 10
+  prerequisite = { focus = FRA_central_propaganda }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.345 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_corporate_councils
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 6
+  cost = 10
+  prerequisite = { focus = FRA_leader_cult }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.346 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_suppress_opposition
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 7
+  cost = 10
+  prerequisite = { focus = FRA_corporate_councils }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.347 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_military_alignment
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 8
+  cost = 10
+  prerequisite = { focus = FRA_suppress_opposition }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.348 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_expansion_doctrine
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 9
+  cost = 10
+  prerequisite = { focus = FRA_military_alignment }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.349 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_national_service
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 10
+  cost = 10
+  prerequisite = { focus = FRA_expansion_doctrine }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.350 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_economic_mobilization
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 11
+  cost = 10
+  prerequisite = { focus = FRA_national_service }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.351 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_colonial_ambition
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 12
+  cost = 10
+  prerequisite = { focus = FRA_economic_mobilization }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.352 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_naval_preparations
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 13
+  cost = 10
+  prerequisite = { focus = FRA_colonial_ambition }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.353 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_air_focus
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 14
+  cost = 10
+  prerequisite = { focus = FRA_naval_preparations }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.354 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_armor_designs
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 15
+  cost = 10
+  prerequisite = { focus = FRA_air_focus }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.355 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_foreign_contacts
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 16
+  cost = 10
+  prerequisite = { focus = FRA_armor_designs }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.356 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_continental_claims
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 17
+  cost = 10
+  prerequisite = { focus = FRA_foreign_contacts }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.357 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_war_readiness
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 18
+  cost = 10
+  prerequisite = { focus = FRA_continental_claims }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.358 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_axis_negotiations
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 19
+  cost = 10
+  prerequisite = { focus = FRA_war_readiness }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.359 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_continental_order
+  icon = GFX_goal_generic_political_reform
+  x = 24
+  y = 20
+  cost = 10
+  prerequisite = { focus = FRA_axis_negotiations }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.360 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_workers_assemblies
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 1
+  cost = 10
+  prerequisite = { focus = FRA_assess_armistice }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.361 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_union_solidarity
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 2
+  cost = 10
+  prerequisite = { focus = FRA_workers_assemblies }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.362 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_agricultural_committees
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 3
+  cost = 10
+  prerequisite = { focus = FRA_union_solidarity }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.363 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_industrial_councils
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 4
+  cost = 10
+  prerequisite = { focus = FRA_agricultural_committees }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.364 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_popular_front
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 5
+  cost = 10
+  prerequisite = { focus = FRA_industrial_councils }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.365 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_councilist_debate
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 6
+  cost = 10
+  prerequisite = { focus = FRA_popular_front }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.366 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_rural_outreach
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 7
+  cost = 10
+  prerequisite = { focus = FRA_councilist_debate }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.367 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_red_guard_drills
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 8
+  cost = 10
+  prerequisite = { focus = FRA_rural_outreach }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.368 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_collective_planning
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 9
+  cost = 10
+  prerequisite = { focus = FRA_red_guard_drills }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.369 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_peoples_schools
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 10
+  cost = 10
+  prerequisite = { focus = FRA_collective_planning }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.370 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_propaganda_networks
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 11
+  cost = 10
+  prerequisite = { focus = FRA_peoples_schools }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.371 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_international_brigades
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 12
+  cost = 10
+  prerequisite = { focus = FRA_propaganda_networks }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.372 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_anti_colonial_agitation
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 13
+  cost = 10
+  prerequisite = { focus = FRA_international_brigades }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.373 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_defensive_works
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 14
+  cost = 10
+  prerequisite = { focus = FRA_anti_colonial_agitation }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.374 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_state_security
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 15
+  cost = 10
+  prerequisite = { focus = FRA_defensive_works }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.375 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_comintern_dialogue
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 16
+  cost = 10
+  prerequisite = { focus = FRA_state_security }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.376 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_revolutionary_doctrine
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 17
+  cost = 10
+  prerequisite = { focus = FRA_comintern_dialogue }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.377 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_overseas_revolution
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 18
+  cost = 10
+  prerequisite = { focus = FRA_revolutionary_doctrine }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.378 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_world_congress
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 19
+  cost = 10
+  prerequisite = { focus = FRA_overseas_revolution }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.379 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_vanguard_of_change
+  icon = GFX_goal_generic_political_reform
+  x = 36
+  y = 20
+  cost = 10
+  prerequisite = { focus = FRA_world_congress }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.380 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_military_cabinet
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 1
+  cost = 10
+  prerequisite = { focus = FRA_assess_armistice }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.381 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_emergency_provisions
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 2
+  cost = 10
+  prerequisite = { focus = FRA_military_cabinet }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.382 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_officer_corps_review
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 3
+  cost = 10
+  prerequisite = { focus = FRA_emergency_provisions }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.383 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_armaments_drive
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 4
+  cost = 10
+  prerequisite = { focus = FRA_officer_corps_review }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.384 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_colonial_security
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 5
+  cost = 10
+  prerequisite = { focus = FRA_armaments_drive }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.385 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_internal_policing
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 6
+  cost = 10
+  prerequisite = { focus = FRA_colonial_security }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.386 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_strategic_planning
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 7
+  cost = 10
+  prerequisite = { focus = FRA_internal_policing }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.387 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_air_command
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 8
+  cost = 10
+  prerequisite = { focus = FRA_strategic_planning }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.388 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_naval_reforms
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 9
+  cost = 10
+  prerequisite = { focus = FRA_air_command }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.389 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_army_drills
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 10
+  cost = 10
+  prerequisite = { focus = FRA_naval_reforms }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.390 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_logistics_overhaul
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 11
+  cost = 10
+  prerequisite = { focus = FRA_army_drills }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.391 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_fortification_effort
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 12
+  cost = 10
+  prerequisite = { focus = FRA_logistics_overhaul }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.392 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_research_cooperation
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 13
+  cost = 10
+  prerequisite = { focus = FRA_fortification_effort }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.393 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_command_school
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 14
+  cost = 10
+  prerequisite = { focus = FRA_research_cooperation }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.394 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_reserve_integration
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 15
+  cost = 10
+  prerequisite = { focus = FRA_command_school }
+  completion_reward = {
+   add_war_support = 0.05
+   country_event = { id = echoes_fra.395 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_war_economy
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 16
+  cost = 10
+  prerequisite = { focus = FRA_reserve_integration }
+  completion_reward = {
+   army_experience = 5
+   country_event = { id = echoes_fra.396 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_defense_pact
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 17
+  cost = 10
+  prerequisite = { focus = FRA_war_economy }
+  completion_reward = {
+   navy_experience = 5
+   country_event = { id = echoes_fra.397 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_overseas_garrisons
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 18
+  cost = 10
+  prerequisite = { focus = FRA_defense_pact }
+  completion_reward = {
+   air_experience = 5
+   country_event = { id = echoes_fra.398 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_supreme_command
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 19
+  cost = 10
+  prerequisite = { focus = FRA_overseas_garrisons }
+  completion_reward = {
+   add_political_power = 50
+   country_event = { id = echoes_fra.399 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+ focus = {
+  id = FRA_national_guard_authority
+  icon = GFX_goal_generic_political_reform
+  x = 48
+  y = 20
+  cost = 10
+  prerequisite = { focus = FRA_supreme_command }
+  completion_reward = {
+   add_stability = 0.05
+   country_event = { id = echoes_fra.400 }
+  }
+  ai_will_do = { factor = 1 }
+ }
+}
