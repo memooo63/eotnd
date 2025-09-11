@@ -1,0 +1,20 @@
+l_english:
+ monarchism:0 "Monarchism"
+ monarchism_noun:0 "Monarchist"
+ monarchism_desc:0 "A system where a monarch holds authority, ranging from absolute rule to constitutional oversight."
+
+ fascism:0 "Fascism"
+ fascism_noun:0 "Fascist"
+ fascism_desc:0 "An authoritarian ideology emphasizing nationalism, centralized power, and collective unity."
+
+ communism:0 "Communism"
+ communism_noun:0 "Communist"
+ communism_desc:0 "A doctrine advocating common ownership and the absence of social classes."
+
+ democratic:0 "Democracy"
+ democratic_noun:0 "Democratic"
+ democratic_desc:0 "Governance based on elected representation and the rule of law."
+
+ militarist_collectivism:0 "Military Collectivism"
+ militarist_collectivism_noun:0 "Militarist"
+ militarist_collectivism_desc:0 "Rule by the armed forces coupled with collective organization of society."
