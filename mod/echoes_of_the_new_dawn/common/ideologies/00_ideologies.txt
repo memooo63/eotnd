@@ -29,6 +29,17 @@ ideologies = {
         }
     }
 
+    neutrality = {
+        color = { 0.50 0.50 0.50 }
+        types = {
+            non_aligned = {
+                can_start_civil_war = yes
+                ai_will_do = { factor = 1 }
+                icon = "GFX_ideology_neutrality"
+            }
+        }
+    }
+
     monarchism = {
         color = { 0.90 0.80 0.20 }
         types = {
