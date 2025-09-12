@@ -36,25 +36,6 @@ guiTypes = {
                 position = { x = 20 y = 160 }
                 text = "$INFLUENCE_LABEL$: [?influence|0]"
             }
-            horizontalSliderType = {
-                name = "tax_slider"
-                position = { x = 20 y = 200 }
-                size = { width = 200 height = 16 }
-                minValue = 0
-                maxValue = 100
-            }
-            effectButtonType = {
-                name = "increase_taxes_btn"
-                position = { x = 240 y = 195 }
-                buttonText = "$eotnd_increase_taxes$"
-                button_effects = { add_to_variable = { money = 50 } }
-            }
-            effectButtonType = {
-                name = "decrease_taxes_btn"
-                position = { x = 240 y = 225 }
-                buttonText = "$eotnd_decrease_taxes$"
-                button_effects = { add_to_variable = { money = -50 } }
-            }
         }
     }
 }

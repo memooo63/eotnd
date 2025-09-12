@@ -1,0 +1,55 @@
+add_money = {
+    add_to_variable = { money = value }
+    if = { limit = { check_variable = { money < 0 } } set_variable = { money = 0 } }
+}
+
+subtract_money = {
+    add_to_variable = { money = -value }
+    if = { limit = { check_variable = { money < 0 } } set_variable = { money = 0 } }
+}
+
+add_debt = {
+    add_to_variable = { debt = value }
+}
+
+apply_tax_income_monthly = {
+    set_variable = { income = 0 }
+    temp_variable = tax_rate
+    multiply_variable = { temp_variable = 10 }
+    add_to_variable = { income = temp_variable }
+    add_to_variable = { money = temp_variable }
+    clr_variable = temp_variable
+}
+
+military_upkeep_monthly = {
+    temp_variable = 0
+    every_owned_division = { add_to_variable = { temp_variable = 1 } }
+    multiply_variable = { temp_variable = 1 }
+    add_to_variable = { money = -temp_variable }
+    add_to_variable = { expenses = temp_variable }
+    clr_variable = temp_variable
+}
+
+garrison_upkeep_monthly = {
+    temp_variable = 0
+    every_owned_state = {
+        limit = { is_occupied_state = yes }
+        add_to_variable = { temp_variable = 1 }
+    }
+    multiply_variable = { temp_variable = 1 }
+    add_to_variable = { money = -temp_variable }
+    add_to_variable = { expenses = temp_variable }
+    clr_variable = temp_variable
+}
+
+pay_interest_monthly = {
+    temp_variable = debt
+    multiply_variable = { temp_variable = 0.05 }
+    add_to_variable = { money = -temp_variable }
+    add_to_variable = { expenses = temp_variable }
+    clr_variable = temp_variable
+}
+
+clamp_money = {
+    if = { limit = { check_variable = { money < 0 } } set_variable = { money = 0 } }
+}

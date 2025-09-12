@@ -1,0 +1,6 @@
+opinion_modifiers = {
+    eotnd_influence_opinion = {
+        opinion = 40
+        diplomacy = 10
+    }
+}
