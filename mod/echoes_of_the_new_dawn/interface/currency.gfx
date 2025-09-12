@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+        name = "GFX_topbar_currency"
+        texturefile = "gfx/interface/topbar/currency.dds"
+        noOfFrames = 1
+    }
+}

@@ -1,0 +1,31 @@
+eotnd_add_money = {
+    add_to_variable = { money = value }
+}
+
+eotnd_add_debt = {
+    add_to_variable = { debt = value }
+}
+
+eotnd_add_influence = {
+    add_to_variable = { influence = value }
+}
+
+eotnd_monthly_economy_tick = {
+    # pay interest
+    temp_variable = debt
+    multiply_variable = { temp_variable = 0.05 }
+    add_to_variable = { money = -temp_variable }
+    clr_variable = temp_variable
+
+    # influence decay
+    temp_variable = influence
+    multiply_variable = { temp_variable = 0.02 }
+    add_to_variable = { influence = -temp_variable }
+    clr_variable = temp_variable
+}
+
+eotnd_initialize_economy = {
+    set_variable = { money = 1000 }
+    set_variable = { debt = 0 }
+    set_variable = { influence = 0 }
+}
