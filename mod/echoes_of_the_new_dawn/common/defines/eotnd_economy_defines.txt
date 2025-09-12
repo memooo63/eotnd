@@ -1,5 +1,10 @@
 NDefines = {
     NCountry = {
-        EOTND_INTEREST_RATE = 0.05
+        MONEY_SCALE = 100000000
+        INTEREST_YEARLY = 0.05
+        DIVISION_UPKEEP = 1
+        GARRISON_UPKEEP_PER_OCCUPIED_STATE = 1
+        MAJOR_INFLUENCE_COST_MULT = 2
+        INFLUENCE_DECAY_MONTHLY = 1
     }
 }

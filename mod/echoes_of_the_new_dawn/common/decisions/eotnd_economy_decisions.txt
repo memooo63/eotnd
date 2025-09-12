@@ -3,34 +3,42 @@ decision_categories = {
         icon = generic_production
         decisions = {
             eotnd_increase_taxes = {
-                cost = 50
-                available = { }
+                cost = 0
+                available = { check_variable = { tax_rate < 3 } }
                 visible = { always = yes }
-                complete_effect = {
-                    eotnd_add_money = { value = 100 }
-                }
+                complete_effect = { add_to_variable = { tax_rate = 1 } }
             }
 
             eotnd_decrease_taxes = {
-                cost = 50
-                available = { }
+                cost = 0
+                available = { check_variable = { tax_rate > 0 } }
                 visible = { always = yes }
-                complete_effect = {
-                    eotnd_add_money = { value = -100 }
-                }
+                complete_effect = { add_to_variable = { tax_rate = -1 } }
             }
 
             eotnd_give_aid = {
-                cost = 100
-                available = { }
+                cost = 0
+                available = { check_variable = { money >= 100 } }
                 visible = { always = yes }
                 target_trigger = { is_country = yes }
-                target_effect = {
-                    eotnd_add_money = { value = 100 }
-                    eotnd_add_influence = { value = 10 }
-                }
                 complete_effect = {
-                    eotnd_add_money = { value = -100 }
+                    if = {
+                        limit = { target = { is_major = yes } }
+                        subtract_money = { value = 200 }
+                        add_to_variable = { influence = 5 }
+                        target = {
+                            add_money = { value = 200 }
+                            add_opinion_modifier = { target = ROOT modifier = eotnd_influence_opinion days = 90 }
+                        }
+                    }
+                    else = {
+                        subtract_money = { value = 100 }
+                        add_to_variable = { influence = 10 }
+                        target = {
+                            add_money = { value = 100 }
+                            add_opinion_modifier = { target = ROOT modifier = eotnd_influence_opinion days = 90 }
+                        }
+                    }
                 }
             }
         }
