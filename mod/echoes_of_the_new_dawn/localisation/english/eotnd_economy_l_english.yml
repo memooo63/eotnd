@@ -1,0 +1,13 @@
+l_english:
+ MONARCHISM:0 "Monarchism"
+ MILITARIST_COLLECTIVISM:0 "Militarist Collectivism"
+ eotnd_economy_category:0 "Economic Policies"
+ eotnd_increase_taxes:0 "Increase Taxes"
+ eotnd_increase_taxes_desc:0 "Raise taxes to generate more money."
+ eotnd_decrease_taxes:0 "Decrease Taxes"
+ eotnd_decrease_taxes_desc:0 "Lower taxes to appease the populace."
+ eotnd_give_aid:0 "Provide Financial Aid"
+ eotnd_give_aid_desc:0 "Send money to another nation to gain influence."
+ MONEY_LABEL:0 "Money"
+ DEBT_LABEL:0 "Debt"
+ INFLUENCE_LABEL:0 "Influence"
