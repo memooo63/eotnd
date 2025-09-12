@@ -1,0 +1,5 @@
+NDefines = {
+    NCountry = {
+        EOTND_INTEREST_RATE = 0.05
+    }
+}

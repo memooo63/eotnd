@@ -1,0 +1,38 @@
+decision_categories = {
+    eotnd_economy_category = {
+        icon = generic_production
+        decisions = {
+            eotnd_increase_taxes = {
+                cost = 50
+                available = { }
+                visible = { always = yes }
+                complete_effect = {
+                    eotnd_add_money = { value = 100 }
+                }
+            }
+
+            eotnd_decrease_taxes = {
+                cost = 50
+                available = { }
+                visible = { always = yes }
+                complete_effect = {
+                    eotnd_add_money = { value = -100 }
+                }
+            }
+
+            eotnd_give_aid = {
+                cost = 100
+                available = { }
+                visible = { always = yes }
+                target_trigger = { is_country = yes }
+                target_effect = {
+                    eotnd_add_money = { value = 100 }
+                    eotnd_add_influence = { value = 10 }
+                }
+                complete_effect = {
+                    eotnd_add_money = { value = -100 }
+                }
+            }
+        }
+    }
+}

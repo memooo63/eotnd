@@ -1,0 +1,25 @@
+guiTypes = {
+    containerWindowType = {
+        name = "eotnd_economy_window"
+        position = { x = 10 y = 10 }
+        size = { width = 220 height = 120 }
+        moveable = yes
+        children = {
+            instantTextBoxType = {
+                name = "money_text"
+                position = { x = 10 y = 10 }
+                text = "MONEY: [?money|0]"
+            }
+            instantTextBoxType = {
+                name = "debt_text"
+                position = { x = 10 y = 40 }
+                text = "DEBT: [?debt|0]"
+            }
+            instantTextBoxType = {
+                name = "influence_text"
+                position = { x = 10 y = 70 }
+                text = "INFLUENCE: [?influence|0]"
+            }
+        }
+    }
+}

@@ -1,0 +1,4 @@
+on_actions = {
+    on_startup = { eotnd_initialize_economy = yes }
+    monthly = { country_event = { id = eotnd_economy.1 } }
+}
