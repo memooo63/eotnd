@@ -1,6 +1,7 @@
 ﻿l_german:
  MONARCHISM:0 "Monarchismus"
  MILITARIST_COLLECTIVISM:0 "Militaristischer Kollektivismus"
+ NON_ALIGNED:0 "Blockfrei"
  eotnd_economy_category:0 "Wirtschaftspolitik"
  eotnd_increase_taxes:0 "Steuern erh\u00f6hen"
  eotnd_increase_taxes_desc:0 "Steuern anheben, um mehr Geld zu generieren."

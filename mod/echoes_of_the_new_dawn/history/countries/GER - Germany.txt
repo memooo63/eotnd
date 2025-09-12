@@ -17,31 +17,31 @@ create_country_leader = {
     picture = "gfx/leaders/GER/Adolf_Hitler.dds"
     desc = ""
 }
-create_country_leader = {
-    name = "Konrad Adenauer"
-    ideology = democratic
-    traits = { }
-    picture = "gfx/leaders/GER/portrait_generic.dds"
-    desc = ""
-}
-create_country_leader = {
-    name = "Ernst Thälmann"
-    ideology = communism
-    traits = { }
-    picture = "gfx/leaders/GER/portrait_generic.dds"
-    desc = ""
-}
-create_country_leader = {
-    name = "Prince Wilhelm"
-    ideology = monarchism
-    traits = { }
-    picture = "gfx/leaders/GER/portrait_generic.dds"
-    desc = ""
-}
-create_country_leader = {
-    name = "Werner von Blomberg"
-    ideology = militarist_collectivism
-    traits = { }
-    picture = "gfx/leaders/GER/portrait_generic.dds"
-    desc = ""
-}
+    create_country_leader = {
+        name = "Konrad Adenauer"
+        ideology = democratic
+        traits = { }
+        picture = "gfx/leaders/_generic.dds"
+        desc = ""
+    }
+    create_country_leader = {
+        name = "Ernst Thälmann"
+        ideology = communism
+        traits = { }
+        picture = "gfx/leaders/_generic.dds"
+        desc = ""
+    }
+    create_country_leader = {
+        name = "Prince Wilhelm"
+        ideology = monarchism
+        traits = { }
+        picture = "gfx/leaders/_generic.dds"
+        desc = ""
+    }
+    create_country_leader = {
+        name = "Werner von Blomberg"
+        ideology = militarist_collectivism
+        traits = { }
+        picture = "gfx/leaders/_generic.dds"
+        desc = ""
+    }

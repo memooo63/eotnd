@@ -14,7 +14,7 @@ eotnd_set_monarchism = {
         name = "Generic Monarch"
         ideology = monarchism
         traits = { }
-        picture = "gfx/leaders/portrait_generic.dds"
+        picture = "gfx/leaders/_generic.dds"
         desc = ""
     }
 }
@@ -26,7 +26,7 @@ eotnd_set_militarist_collectivism = {
         name = "Military Council"
         ideology = militarist_collectivism
         traits = { }
-        picture = "gfx/leaders/portrait_generic.dds"
+        picture = "gfx/leaders/_generic.dds"
         desc = ""
     }
 }

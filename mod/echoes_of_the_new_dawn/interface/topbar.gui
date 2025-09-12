@@ -19,15 +19,6 @@ guiTypes = {
                 quadTextureSprite = "GFX_topbar_air_experience"
                 position = { x = 700 y = 6 }
             }
-            effectButtonType = {
-                name = "open_currency_btn"
-                quadTextureSprite = "GFX_topbar_currency"
-                tooltip = currency_open_tt
-                position = { x = 730 y = 6 }
-                button_effects = { set_country_flag = open_currency_gui }
-                clicksound = "ui_button_click"
-                z = 100
-            }
         }
     }
 }

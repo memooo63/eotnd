@@ -1,6 +1,7 @@
 ﻿l_english:
  MONARCHISM:0 "Monarchism"
  MILITARIST_COLLECTIVISM:0 "Militarist Collectivism"
+ NON_ALIGNED:0 "Non-Aligned"
  eotnd_economy_category:0 "Economic Policies"
  eotnd_increase_taxes:0 "Increase Taxes"
  eotnd_increase_taxes_desc:0 "Raise taxes to generate more money."
