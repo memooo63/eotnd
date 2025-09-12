@@ -1,0 +1,8 @@
+scripted_gui = {
+    currency_gui = {
+        window_name = "currency_window"
+        context_type = player_context
+        visible = { has_country_flag = open_currency_gui }
+        effects = { close_button_click = { clr_country_flag = open_currency_gui } }
+    }
+}

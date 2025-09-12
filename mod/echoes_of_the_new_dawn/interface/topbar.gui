@@ -1,0 +1,33 @@
+guiTypes = {
+    containerWindowType = {
+        name = "topbar"
+        position = { x = 0 y = 0 }
+        size = { width = 1920 height = 40 }
+        children = {
+            effectButtonType = {
+                name = "army_xp"
+                quadTextureSprite = "GFX_topbar_army_experience"
+                position = { x = 620 y = 6 }
+            }
+            effectButtonType = {
+                name = "navy_xp"
+                quadTextureSprite = "GFX_topbar_navy_experience"
+                position = { x = 660 y = 6 }
+            }
+            effectButtonType = {
+                name = "air_xp"
+                quadTextureSprite = "GFX_topbar_air_experience"
+                position = { x = 700 y = 6 }
+            }
+            effectButtonType = {
+                name = "open_currency_btn"
+                quadTextureSprite = "GFX_topbar_currency"
+                tooltip = currency_open_tt
+                position = { x = 730 y = 6 }
+                button_effects = { set_country_flag = open_currency_gui }
+                clicksound = "ui_button_click"
+                z = 100
+            }
+        }
+    }
+}
