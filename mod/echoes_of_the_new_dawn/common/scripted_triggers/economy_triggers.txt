@@ -1,0 +1,7 @@
+can_afford = {
+  check_variable = { money >= cost }
+}
+
+debt_to_gdp_over = {
+  check_variable = { debt >= gdp * ratio }
+}

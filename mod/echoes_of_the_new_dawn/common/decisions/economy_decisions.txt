@@ -1,0 +1,46 @@
+economy_category = {
+  icon = generic_decision
+  allowed = { always = yes }
+  visible = { always = yes }
+  decisions = {
+    set_low_taxes = {
+      cost = 0
+      complete_effect = { set_variable = { tax_rate = 0.1 } }
+    }
+    set_medium_taxes = {
+      cost = 0
+      complete_effect = { set_variable = { tax_rate = 0.2 } }
+    }
+    set_high_taxes = {
+      cost = 0
+      complete_effect = { set_variable = { tax_rate = 0.3 } }
+    }
+    war_bonds = {
+      allowed = { has_war = yes }
+      complete_effect = {
+        add_ideas = war_bonds
+        add_variable = { money = 100 }
+        add_variable = { debt = 100 }
+      }
+    }
+    austerity = {
+      allowed = { has_war = no }
+      complete_effect = { add_ideas = austerity }
+    }
+    stimulus = {
+      allowed = { has_war = no }
+      complete_effect = { add_ideas = stimulus }
+    }
+    buy_influence = {
+      target = country
+      complete_effect = { econ_buy_influence = { TARGET = FROM } }
+    }
+    pay_down_debt = {
+      available = { check_variable = { money >= 10 } }
+      complete_effect = {
+        subtract_variable = { money = 10 }
+        add_variable = { debt = -10 }
+      }
+    }
+  }
+}

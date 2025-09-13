@@ -1,0 +1,4 @@
+bought_influence = {
+  opinion = 25
+  decay = 0.07
+}

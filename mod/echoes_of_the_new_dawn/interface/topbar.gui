@@ -1,0 +1,7 @@
+guiTypes = {
+  iconButtonType = {
+    name = "economy_button"
+    tooltip = "Economy"
+    on_click = "[Show/Hide economy_window]"
+  }
+}

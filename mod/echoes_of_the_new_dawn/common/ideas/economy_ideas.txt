@@ -1,0 +1,35 @@
+ideas = {
+  war_bonds = {
+    removal_cost = -1
+    modifier = {
+      consumer_goods_factor = -0.05
+    }
+  }
+  austerity = {
+    removal_cost = -1
+    modifier = {
+      political_power_gain = 0.05
+      production_speed_buildings_factor = -0.1
+    }
+  }
+  stimulus = {
+    removal_cost = -1
+    modifier = {
+      political_power_gain = -0.05
+      production_speed_buildings_factor = 0.1
+    }
+  }
+  hyperinflation = {
+    removal_cost = -1
+    modifier = {
+      political_power_gain = -0.3
+      stability_factor = -0.2
+    }
+  }
+  credit_crunch = {
+    removal_cost = -1
+    modifier = {
+      stability_factor = -0.2
+    }
+  }
+}

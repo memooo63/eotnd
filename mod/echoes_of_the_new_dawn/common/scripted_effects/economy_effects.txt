@@ -1,0 +1,59 @@
+econ_add_money = {
+  add_variable = { money = FROM }
+  clamp_variable = { money = { min = -10000 } }
+}
+
+econ_pay = {
+  subtract_variable = { money = COST }
+}
+
+econ_add_debt = {
+  add_variable = { debt = AMOUNT }
+}
+
+econ_apply_interest = {
+  add_variable = { money = debt }
+  multiply_variable = { money = -interest_rate }
+}
+
+econ_update_credit_rating = {
+  if = {
+    limit = { check_variable = { debt >= gdp * 0.9 } }
+    set_variable = { credit_rating = 0 }
+  }
+  else_if = {
+    limit = { check_variable = { debt >= gdp * 0.7 } }
+    set_variable = { credit_rating = 1 }
+  }
+  else_if = {
+    limit = { check_variable = { debt >= gdp * 0.5 } }
+    set_variable = { credit_rating = 2 }
+  }
+  else = {
+    set_variable = { credit_rating = 3 }
+  }
+}
+
+econ_monthly_bookkeeping = {
+  # recompute income/expenses from factories, trade, consumer goods and upkeep
+  # set inflation based on money growth, clamp
+  call = econ_apply_interest
+  call = econ_update_credit_rating
+}
+
+econ_buy_influence = {
+  parameter = { TARGET }
+  set_temp_variable = { cost = 50 }
+  if = {
+    limit = { TARGET = { is_major = yes } }
+    multiply_temp_variable = { cost = econ_major_influence_cost_mult }
+  }
+  else = {
+    multiply_temp_variable = { cost = econ_minor_influence_cost_mult }
+  }
+  if = {
+    limit = { check_variable = { money >= cost } }
+    subtract_variable = { money = cost }
+    TARGET = { add_opinion_modifier = { target = ROOT modifier = bought_influence days = 365 } }
+  }
+}

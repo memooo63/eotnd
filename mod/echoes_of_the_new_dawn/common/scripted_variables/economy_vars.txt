@@ -1,0 +1,10 @@
+# Economy constants
+ econ_money_per_civ = 0.45
+ econ_army_upkeep_per_div = 0.08
+ econ_navy_upkeep_per_ship = 0.03
+ econ_air_upkeep_per_airwing = 0.02
+ econ_interest_base = 0.02
+ econ_inflation_to_pp_factor = 0.15
+ econ_debt_gdp_cw_risk = 0.80
+ econ_major_influence_cost_mult = 3.0
+ econ_minor_influence_cost_mult = 1.0

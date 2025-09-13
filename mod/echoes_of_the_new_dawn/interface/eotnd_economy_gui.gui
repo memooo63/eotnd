@@ -1,0 +1,54 @@
+guiTypes = {
+  containerWindowType = {
+    name = "economy_window"
+    visible = no
+    position = { x = 0 y = 0 }
+    size = { width = 300 height = 200 }
+    children = {
+      instantTextBoxType = {
+        name = "money_label"
+        text = "MONEY"
+      }
+      instantTextBoxType = {
+        name = "income_label"
+        text = "ECON_INCOME"
+      }
+      instantTextBoxType = {
+        name = "expenses_label"
+        text = "ECON_EXPENSES"
+      }
+      instantTextBoxType = {
+        name = "debt_label"
+        text = "ECON_DEBT"
+      }
+      instantTextBoxType = {
+        name = "gdp_label"
+        text = "ECON_GDP"
+      }
+      instantTextBoxType = {
+        name = "inflation_label"
+        text = "ECON_INFLATION"
+      }
+      instantTextBoxType = {
+        name = "tax_rate_label"
+        text = "ECON_TAX_RATE"
+      }
+      buttonType = {
+        name = "pay_debt_button"
+        text = "Pay Debt"
+      }
+      buttonType = {
+        name = "war_bonds_button"
+        text = "War Bonds"
+      }
+      buttonType = {
+        name = "set_taxes_button"
+        text = "Set Taxes"
+      }
+      buttonType = {
+        name = "buy_influence_button"
+        text = "Buy Influence"
+      }
+    }
+  }
+}

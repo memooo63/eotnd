@@ -1,0 +1,44 @@
+ideologies = {
+  democratic = {
+    types = { democratic }
+    can_be_monarch = no
+    war_impact_on_world_tension = -0.2
+    color = { 0.2 0.5 0.9 }
+    icon = "GFX_ideology_democratic"
+  }
+  fascism = {
+    types = { fascism }
+    can_be_monarch = no
+    war_impact_on_world_tension = 0.4
+    color = { 0.3 0.3 0.3 }
+    icon = "GFX_ideology_fascism"
+  }
+  communism = {
+    types = { communism }
+    can_be_monarch = no
+    war_impact_on_world_tension = 0.1
+    color = { 0.9 0.1 0.1 }
+    icon = "GFX_ideology_communism"
+  }
+  monarchism = {
+    types = { monarchism }
+    can_be_monarch = yes
+    war_impact_on_world_tension = -0.1
+    color = { 0.7 0.6 0.2 }
+    icon = "GFX_ideology_monarchism"
+  }
+  militarist_collectivism = {
+    types = { militarist_collectivism }
+    can_be_monarch = no
+    war_impact_on_world_tension = 0.2
+    color = { 0.5 0.5 0.1 }
+    icon = "GFX_ideology_militarist_collectivism"
+  }
+  authority = {
+    types = { authority }
+    can_be_monarch = yes
+    war_impact_on_world_tension = -0.1
+    color = { 0.5 0.5 0.5 }
+    icon = "GFX_ideology_authority"
+  }
+}
