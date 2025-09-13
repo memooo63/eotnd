@@ -1,6 +1,0 @@
-on_actions = {
-    on_game_start = {
-        every_country = { country_event = { id = eotnd_setup.1 } }
-    }
-    on_monthly_pulse = { country_event = { id = eotnd_economy.1 } }
-}

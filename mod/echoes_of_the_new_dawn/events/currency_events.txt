@@ -1,8 +1,0 @@
-country_event = {
-    id = eotnd_economy.1
-    hide_window = yes
-    is_triggered_only = yes
-    immediate = {
-        eotnd_monthly_economy_tick = yes
-    }
-}

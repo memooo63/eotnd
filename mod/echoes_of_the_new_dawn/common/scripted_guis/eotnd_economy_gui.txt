@@ -1,9 +1,0 @@
-scripted_gui = {
-    eotnd_economy_gui = {
-        window_name = "eotnd_economy_window"
-        context_type = player_context
-        visible = { has_country_flag = economy_window_open }
-        effects = { close_button_click = { clr_country_flag = economy_window_open } }
-    }
-}
-
