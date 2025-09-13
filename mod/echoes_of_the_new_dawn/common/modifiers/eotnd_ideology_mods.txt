@@ -1,0 +1,25 @@
+authority_ideology = {
+  stability_factor = 0.05
+  political_power_cost = -0.02
+}
+
+democratic_ideology = {
+  stability_factor = 0.05
+}
+
+fascism_ideology = {
+  war_support_factor = 0.05
+}
+
+communism_ideology = {
+  production_speed_industrial_complex_factor = 0.05
+}
+
+monarchism_ideology = {
+  stability_factor = 0.03
+  political_power_gain = 0.02
+}
+
+militarist_collectivism_ideology = {
+  army_experience_gain_mult = 0.05
+}

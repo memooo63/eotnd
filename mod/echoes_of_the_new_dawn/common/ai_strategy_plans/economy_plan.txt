@@ -1,0 +1,29 @@
+aistrategyplan = {
+  id = economy_plan
+  objective = {
+    type = money
+    value = 50
+  }
+  decision = {
+    name = pay_down_debt
+    ai_will_do = {
+      factor = 1
+      modifier = { factor = 0 check_variable = { interest_rate <= 0.05 } }
+      modifier = { factor = 0 check_variable = { money <= 200 } }
+    }
+  }
+  decision = {
+    name = war_bonds
+    ai_will_do = {
+      factor = 1
+      modifier = { factor = 0 has_war = no }
+      modifier = { factor = 0 debt_to_gdp_over = { ratio = 0.6 } }
+    }
+  }
+  decision = {
+    name = buy_influence
+    ai_will_do = {
+      factor = 1
+    }
+  }
+}

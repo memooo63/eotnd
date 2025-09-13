@@ -1,0 +1,28 @@
+namespace = eotnd_econ
+
+country_event = {
+  id = eotnd_econ.1
+  title = eotnd_econ.1.t
+  desc = eotnd_econ.1.d
+  is_triggered_only = yes
+  option = {
+    name = OK
+  }
+}
+
+country_event = {
+  id = eotnd_econ.100
+  title = eotnd_econ.100.t
+  desc = eotnd_econ.100.d
+  is_triggered_only = yes
+  option = {
+    name = eotnd_econ.100.a
+  }
+}
+
+country_event = {
+  id = eotnd_econ.0
+  hide_window = yes
+  trigger = { has_government = neutrality }
+  immediate = { set_politics = { ruling_party = authority } }
+}

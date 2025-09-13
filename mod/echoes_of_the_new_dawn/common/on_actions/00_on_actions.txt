@@ -1,0 +1,23 @@
+on_actions = {
+  on_daily = {
+    effect = {
+      every_country = {
+        # update income/expenses caches
+      }
+    }
+  }
+  on_monthly = {
+    effect = {
+      every_country = {
+        call = econ_monthly_bookkeeping
+        if = {
+          limit = {
+            debt_to_gdp_over = { ratio = econ_debt_gdp_cw_risk }
+            stability < 0.35
+          }
+          country_event = { id = eotnd_econ.100 }
+        }
+      }
+    }
+  }
+}

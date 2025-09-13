@@ -1,0 +1,7 @@
+is_authority = {
+  has_government = authority
+}
+
+is_not_authority = {
+  NOT = { has_government = authority }
+}
