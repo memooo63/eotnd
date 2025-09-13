@@ -2,63 +2,35 @@ ideologies = {
     democratic = {
         color = { 0.25 0.45 1.00 }
         types = {
-            democratic = {
-                can_start_civil_war = yes
-                ai_will_do = { factor = 1 }
-            }
+            democratic = { }
         }
     }
 
     communism = {
         color = { 0.85 0.10 0.10 }
         types = {
-            communism = {
-                can_start_civil_war = yes
-                ai_will_do = { factor = 1 }
-            }
+            communism = { }
         }
     }
 
     fascism = {
         color = { 0.20 0.20 0.20 }
         types = {
-            fascism = {
-                can_start_civil_war = yes
-                ai_will_do = { factor = 1 }
-            }
-        }
-    }
-
-    neutrality = {
-        color = { 0.50 0.50 0.50 }
-        types = {
-            non_aligned = {
-                can_start_civil_war = yes
-                ai_will_do = { factor = 1 }
-                icon = "GFX_ideology_neutrality"
-            }
+            fascism = { }
         }
     }
 
     monarchism = {
         color = { 0.90 0.80 0.20 }
         types = {
-            monarchism = {
-                can_start_civil_war = yes
-                ai_will_do = { factor = 1 }
-                icon = "GFX_ideology_monarchism"
-            }
+            monarchism = { }
         }
     }
 
     militarist_collectivism = {
         color = { 0.10 0.80 0.60 }
         types = {
-            militarist_collectivism = {
-                can_start_civil_war = yes
-                ai_will_do = { factor = 1 }
-                icon = "GFX_ideology_militarist_collectivism"
-            }
+            militarist_collectivism = { }
         }
     }
 }

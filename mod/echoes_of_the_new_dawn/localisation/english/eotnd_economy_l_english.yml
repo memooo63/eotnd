@@ -1,7 +1,6 @@
 ﻿l_english:
  MONARCHISM:0 "Monarchism"
  MILITARIST_COLLECTIVISM:0 "Militarist Collectivism"
- NON_ALIGNED:0 "Non-Aligned"
  eotnd_economy_category:0 "Economic Policies"
  eotnd_increase_taxes:0 "Increase Taxes"
  eotnd_increase_taxes_desc:0 "Raise taxes to generate more money."
@@ -17,8 +16,8 @@
  EXPENSES_LABEL:0 "Expenses"
  GER_monarchism_party:0 "Hoher Adel"
  GER_monarchism_party_long:0 "Hoher Adel"
- GER_militarist_collectivism_party:0 "Milit\u00e4rischer Rat"
- GER_militarist_collectivism_party_long:0 "Milit\u00e4rischer Rat"
+ GER_militarist_collectivism_party:0 "Militärischer Rat"
+ GER_militarist_collectivism_party_long:0 "Militärischer Rat"
  GER_fascism_party:0 "NSDAP"
  GER_fascism_party_long:0 "Nationalsozialistische Deutsche Arbeiterpartei"
  GER_democratic_party:0 "Zentrum"

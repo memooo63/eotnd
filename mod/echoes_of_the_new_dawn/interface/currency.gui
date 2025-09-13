@@ -1,10 +1,10 @@
 guiTypes = {
     containerWindowType = {
         name = "currency_window"
+        visible = no
         position = { x=600 y=110 }
         size = { width=520 height=360 }
         moveable = yes
-        draggable = yes
         children = {
             closeButtonType = {
                 name = "currency_close"
@@ -12,27 +12,27 @@ guiTypes = {
                 button_effects = { clr_country_flag = open_currency_gui }
             }
             instantTextBoxType = {
-                name = "money_text"
+                name = "currency_money_text"
                 position = { x = 20 y = 40 }
                 text = "$MONEY_LABEL$: [?money|0]"
             }
             instantTextBoxType = {
-                name = "debt_text"
+                name = "currency_debt_text"
                 position = { x = 20 y = 70 }
                 text = "$DEBT_LABEL$: [?debt|0]"
             }
             instantTextBoxType = {
-                name = "income_text"
+                name = "currency_income_text"
                 position = { x = 20 y = 100 }
                 text = "$INCOME_LABEL$: [?income|0]"
             }
             instantTextBoxType = {
-                name = "expenses_text"
+                name = "currency_expenses_text"
                 position = { x = 20 y = 130 }
                 text = "$EXPENSES_LABEL$: [?expenses|0]"
             }
             instantTextBoxType = {
-                name = "influence_text"
+                name = "currency_influence_text"
                 position = { x = 20 y = 160 }
                 text = "$INFLUENCE_LABEL$: [?influence|0]"
             }

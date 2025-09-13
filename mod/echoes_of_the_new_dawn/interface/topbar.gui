@@ -19,6 +19,21 @@ guiTypes = {
                 quadTextureSprite = "GFX_topbar_air_experience"
                 position = { x = 700 y = 6 }
             }
+            iconButtonType = {
+                name = "economy_button"
+                quadTextureSprite = "GFX_topbar_manpower_icon"
+                position = { x = 740 y = 6 }
+                tooltip = "Economy"
+                on_click = {
+                    if = {
+                        limit = { has_country_flag = economy_window_open }
+                        clr_country_flag = economy_window_open
+                    }
+                    else = {
+                        set_country_flag = economy_window_open
+                    }
+                }
+            }
         }
     }
 }
