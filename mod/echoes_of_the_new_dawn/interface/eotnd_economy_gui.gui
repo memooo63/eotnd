@@ -1,22 +1,28 @@
 guiTypes = {
     containerWindowType = {
         name = "eotnd_economy_window"
+        visible = no
         position = { x = 10 y = 10 }
         size = { width = 220 height = 120 }
         moveable = yes
         children = {
+            closeButtonType = {
+                name = "economy_close"
+                position = { x = 195 y = 5 }
+                button_effects = { clr_country_flag = economy_window_open }
+            }
             instantTextBoxType = {
-                name = "money_text"
+                name = "economy_money_text"
                 position = { x = 10 y = 10 }
                 text = "MONEY: [?money|0]"
             }
             instantTextBoxType = {
-                name = "debt_text"
+                name = "economy_debt_text"
                 position = { x = 10 y = 40 }
                 text = "DEBT: [?debt|0]"
             }
             instantTextBoxType = {
-                name = "influence_text"
+                name = "economy_influence_text"
                 position = { x = 10 y = 70 }
                 text = "INFLUENCE: [?influence|0]"
             }
