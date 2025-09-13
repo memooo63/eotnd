@@ -5,7 +5,6 @@ guiTypes = {
         position = { x=600 y=110 }
         size = { width=520 height=360 }
         moveable = yes
-        draggable = yes
         children = {
             closeButtonType = {
                 name = "currency_close"

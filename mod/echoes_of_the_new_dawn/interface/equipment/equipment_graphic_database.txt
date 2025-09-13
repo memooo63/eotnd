@@ -1,0 +1,6 @@
+equipment_graphics = {
+    ITA_mechanized_vehicle_1 = { entity = "ITA_mechanized_vehicle_1_entity" }
+    GER_super_heavy_armor = { entity = "GER_super_heavy_armor_entity" }
+    SOV_modern_armor = { entity = "SOV_modern_armor_entity" }
+    SOV_super_heavy_armor = { entity = "SOV_super_heavy_armor_entity" }
+}
